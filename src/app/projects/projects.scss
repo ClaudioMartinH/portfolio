@@ -1,0 +1,825 @@
+/* Variables */
+$primary-color: #24abffb2;
+$dark-bg: #1a1a1a10;
+$light-text: #f8f9fa;
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  overflow-x: hidden;
+  width: 100vw;
+}
+
+// /* PROYECTOS - Conservando todos tus estilos ORIGINALES */
+// .projects-section {
+//   background: transparent;
+//   height: 80vh;
+//   margin-top: 5rem;
+//   position: relative;
+//   z-index: 1;
+  
+//   /* NUEVO: Aseguramos espacio para el footer */
+//   padding-bottom: 120px; /* Altura aproximada de tu footer + margen */
+// }
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  padding: 0 1rem;
+}
+
+.project-card {
+  background: rgba(255, 255, 255, 0.02);
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 0 10px #1e8fff82;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 15px #1e8fffc5;
+
+    .project-links {
+      opacity: 1;
+    }
+  }
+}
+
+.project-image-container {
+  position: relative;
+  width: 100%;
+  padding-top: 56.25%; /* 16:9 ratio */
+  overflow: hidden;
+
+  img {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+.project-links {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: space-between;
+  padding: 0.5rem;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+
+  a {
+    background: rgba(0, 0, 0, 0.6);
+    color: white;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    transition: background 0.3s ease;
+
+    &:hover {
+      background: black;
+    }
+  }
+}
+
+.project-info {
+  padding: 1rem;
+  text-align: center;
+
+  h3 {
+    margin: 0 0 0.5rem 0;
+    font-size: 1rem;
+    line-height: 1.2;
+    font-weight: 500;
+    padding: 0;
+    background: linear-gradient(to right, #70ba7a, #4a90e2);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  p {
+    color: $light-text;
+    font-size: 1rem;
+  }
+}
+
+
+/* FILTROS - Estilo original conservado */
+.filters {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-bottom: 3rem;
+  flex-wrap: wrap;
+
+  button {
+    background: transparent;
+    color: $light-text;
+    margin-top: -2rem;
+    border: 2px solid $primary-color;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 1.1rem;
+
+    &.active,
+    &:hover {
+      background: $primary-color;
+      color: white;
+      transform: scale(1.05);
+    }
+  }
+}
+
+/* TÍTULO - Estilo original conservado */
+.section-title {
+  font-size: 3rem;
+  text-align: center;
+  margin-bottom: 10rem;
+  color: $primary-color;
+  position: relative;
+  font-weight: 700;
+
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 50%;
+    height: 10px;
+    background: #24abffb2;
+  }
+}
+
+/* RESPONSIVE - Mejorado pero conservando tu estructura */
+@media (min-width: 1600px) {
+  .project-card {
+    max-width: 1000px;
+  }
+
+  .project-info {
+    h3 {
+      font-size: 2rem;
+    }
+
+    span {
+      font-size: 1.3rem;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .projects-section {
+    height: auto;
+    min-height: 70vh;
+    margin-top: 3rem;
+    padding-bottom: 90px; /* Menos espacio para móvil */
+  }
+
+  .carousel-container {
+    height: auto;
+    max-height: none;
+    padding-bottom: 1rem;
+  }
+
+  .projects-carousel {
+    height: auto;
+    min-height: 400px;
+  }
+
+  .project-card {
+    flex-direction: column;
+    max-height: 75vh;
+  }
+
+  .project-image,
+  .project-info {
+    flex: none;
+    width: 100%;
+  }
+
+  .project-image {
+    height: 200px;
+  }
+
+  .project-info {
+    padding: 1rem;
+    overflow-y: auto;
+    max-height: 40vh;
+  }
+
+  .section-title {
+    font-size: 2.2rem;
+    margin-bottom: 3rem;
+  }
+
+  .filters {
+    gap: 0.8rem;
+    margin-bottom: 2rem;
+
+    button {
+      padding: 0.6rem 1.2rem;
+      font-size: 0.95rem;
+      margin-top: 0;
+    }
+  }
+
+  /* Flechas más pequeñas en móvil */
+  :host ::ng-deep {
+    .igx-carousel__arrow {
+      width: 30px !important;
+      height: 30px !important;
+      
+      &::before {
+        font-size: 16px;
+      }
+    }
+  }
+}
+/* RESPONSIVE - Mejorado pero conservando tu estructura */
+@media (min-width: 1600px) {
+  .project-card {
+    max-width: 1000px;
+  }
+
+  .project-info {
+    h3 {
+      font-size: 2rem;
+    }
+
+    span {
+      font-size: 1.3rem;
+    }
+  }
+}
+
+.custom-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(36, 171, 255, 0.7);
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 18px;
+  z-index: 10;
+  cursor: pointer;
+  transition: all 0.3s ease;
+
+  &:hover {
+    background: rgba(36, 171, 255, 1);
+    transform: translateY(-50%) scale(1.1);
+  }
+
+  &.prev {
+    left: 20px;
+  }
+
+  &.next {
+    right: 20px;
+  }
+
+  i {
+    pointer-events: none; // Evita que el icono interfiera con el clic
+  }
+}
+
+@media (max-width: 768px) {
+  .custom-arrow {
+    width: 30px;
+    height: 30px;
+    font-size: 14px;
+
+    &.prev {
+      left: 10px;
+    }
+
+    &.next {
+      right: 10px;
+    }
+  }
+}
+@media (max-width: 768px) {
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .project-card {
+    margin: 0 auto;
+  }
+}
+/* Responsive */
+// @media (max-width: 768px) {
+//   .projects-section {
+//     height: auto;
+//     min-height: 70vh;
+//     margin-top: 3rem;
+//     padding-bottom: 90px;
+//   }
+
+//   .carousel-container {
+//     width: 100vw;
+//     max-width: 100%;
+//     padding: 0;
+//     margin: 0;
+//     overflow: hidden;
+//   }
+
+//   .projects-carousel {
+//     width: 100%;
+//     height: auto;
+//     min-height: 400px;
+//     max-height: none;
+//     margin: 0;
+//   }
+
+//   .project-slide {
+//     width: 100vw;
+//     padding: 0 15px;
+//     box-sizing: border-box;
+//   }
+
+//   .project-card {
+//     flex-direction: column;
+//     width: 100%;
+//     max-width: 100%;
+//     height: auto;
+//     min-height: 400px;
+//     margin: 0 auto;
+//   }
+
+//   .project-image {
+//     width: 100%;
+//     height: 200px;
+//     flex: none;
+    
+//     img {
+//       object-fit: cover;
+//       width: 100%;
+//       height: 100%;
+//     }
+//   }
+
+//   .project-info {
+//     width: 100%;
+//     padding: 1rem;
+//     flex: none;
+//     max-height: none;
+//     overflow: visible;
+//   }
+
+//   .custom-arrow {
+//     width: 30px;
+//     height: 30px;
+//     font-size: 14px;
+//     background: rgba(36, 171, 255, 0.9);
+
+//     &.prev {
+//       left: 10px;
+//     }
+
+//     &.next {
+//       right: 10px;
+//     }
+//   }
+
+//   /* Ocultar scroll horizontal del carrusel */
+//   :host ::ng-deep {
+//     .igx-carousel {
+//       overflow-x: hidden;
+      
+//       .igx-slide {
+//         width: 100vw;
+//         max-width: 100%;
+//       }
+//     }
+//   }
+// }
+
+
+// /* Variables */
+// $primary-color: #009a4a;
+// $dark-bg: #1a1a1a10;
+// $light-text: #f8f9fa;
+
+// .projects-carousel {
+//   height: 80vh; /* Ajusta según necesites */
+//   min-height: 600px; /* Altura mínima para evitar cortes */
+// }
+
+// /* Asegúrate de que los slides ocupen el 100% del carrusel */
+// .igx-carousel, .igx-slide {
+//   height: 100%;
+// }
+
+// .project-slide {
+//   display: flex;
+//   height: 100%; /* Ocupa toda la altura del slide */
+//   padding: 0; /* Elimina padding que pueda restar espacio */
+// }
+
+// /* Estilos base */
+// .projects-section {
+//   padding: 5rem 0;
+//   background: $dark-bg;
+//   color: $light-text;
+
+//   .container {
+//     max-width: 80%; // Aumenté el ancho máximo para mejor visualización
+//     margin: 0 auto;
+//     padding: 0 1.5rem;
+//     min-height: fit-content;
+//     background: #1a1a1a00;
+//   }
+// }
+
+// .section-title {
+//   font-size: 2.5rem;
+//   text-align: center;
+//   margin-bottom: 3rem;
+//   color: $primary-color;
+//   position: relative;
+
+//   &::after {
+//     content: '';
+//     position: absolute;
+//     bottom: -10px;
+//     left: 50%;
+//     transform: translateX(-50%);
+//     width: 80px;
+//     height: 3px;
+//     background: $primary-color;
+//   }
+// }
+
+// .filters {
+//   display: flex;
+//   justify-content: center;
+//   gap: 1rem;
+//   margin-bottom: 2rem;
+//   flex-wrap: wrap;
+
+//   button {
+//     background: transparent;
+//     color: $light-text;
+//     border: 1px solid $primary-color;
+//     padding: 0.5rem 1.5rem;
+//     border-radius: 30px;
+//     cursor: pointer;
+//     transition: all 0.3s ease;
+
+//     &.active,
+//     &:hover {
+//       background: $primary-color;
+//       color: rgba(255, 255, 255, 0.026);
+//     }
+//   }
+// }
+
+// .projects-grid {
+//   display: grid;
+//   grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+//   gap: 2rem;
+// }
+
+// .project-card {
+//   height: 100%; /* Ocupa toda la altura del slide */
+//   display: flex;
+//   flex-direction: column;
+//   transition: all 0.3s ease;
+
+//   &:hover {
+//     transform: translateY(-10px);
+//     box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+
+//     .project-links {
+//       opacity: 1;
+//     }
+//   }
+
+//   &.cou-cer {
+//     max-width: 500px; // antes: 300px
+//     margin: 0 auto;
+  
+//     .project-image {
+//       height: 300px; // antes: 180px
+//     }
+  
+//     .project-info h3 {
+//       font-size: 1.2rem; // un poquito más grande
+//     }
+  
+//     .project-info span {
+//       font-size: 1rem;
+//     }
+//   }
+// }
+
+// .project-image {
+//   flex: 1; /* Toma el espacio disponible */
+//   min-height: 60%; /* Mínimo para la imagen */
+
+//   img {
+//     width: 100%;
+//     height: 100%;
+//     object-fit: cover;
+//     transition: transform 0.5s ease;
+//   }
+
+//   &:hover img {
+//     transform: scale(1.1);
+//   }
+// }
+
+// .project-links {
+//   position: absolute;
+//   top: 0;
+//   left: 0;
+//   width: 100%;
+//   height: 100%;
+//   background: rgba(0, 154, 75, 0.8);
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+//   gap: 1rem;
+//   opacity: 0;
+//   transition: opacity 0.3s ease;
+
+//   a {
+//     color: rgb(144, 0, 0);
+//     font-size: 1.5rem;
+//     width: 50px;
+//     height: 50px;
+//     border-radius: 50%;
+//     background: rgba(0, 0, 0, 0.5);
+//     display: flex;
+//     justify-content: center;
+//     align-items: center;
+//     transition: all 0.3s ease;
+
+//     &:hover {
+//       background: black;
+//       transform: scale(1.1);
+//     }
+//   }
+// }
+
+// .project-info {
+//   flex: 0 0 auto; /* Altura fija para el texto */
+//   h3 {
+//     margin: 0 0 0.5rem;
+//     font-size: 1.3rem;
+//     color: $light-text;
+//   }
+//   span {
+//     color: rgba(168, 37, 37, 0.7);
+//     font-size: 0.9rem;
+//     display: block;
+//     margin-top: 0.5rem;
+//   }
+// }
+
+
+// /* Categorías de colores */
+// .project-card.web-dev {
+//   border-top: 3px solid #3498db;
+
+//   .project-info h3 {
+//     color: #3498db;
+//   }
+// }
+
+// .project-card.app-dev {
+//   border-top: 3px solid #9b59b6;
+
+//   .project-info h3 {
+//     color: #9b59b6;
+//   }
+// }
+
+// .project-card.cou-cer {
+//   border-top: 3px solid #e74c3c;
+
+//   .project-info h3 {
+//     color: #e74c3c;
+//   }
+// }
+
+// /* Responsive */
+// @media (max-width: 768px) {
+//   .projects-grid {
+//     grid-template-columns: 1fr;
+//   }
+
+//   .section-title {
+//     font-size: 2rem;
+//   }
+
+//   .project-card.cou-cer {
+//     max-width: 100%;
+//   }
+// }
+
+
+
+// /* Variables */
+// $primary-color: #009a4b;
+// $dark-bg: #1a1a1a;
+// $light-text: #f8f9fa;
+
+// /* Estilos base */
+// .projects-section {
+//   padding: 5rem 0;
+//   background: rgba(0, 0, 0, 0);
+//   color: $light-text;
+  
+//   .container {
+//     max-width: 1200px;
+//     margin: 0 auto;
+//     padding: 0 1.5rem;
+//   }
+// }
+
+// .section-title {
+//   font-size: 2.5rem;
+//   text-align: center;
+//   margin-bottom: 3rem;
+//   color: $primary-color;
+//   position: relative;
+  
+//   &::after {
+//     content: '';
+//     position: absolute;
+//     bottom: -10px;
+//     left: 50%;
+//     transform: translateX(-50%);
+//     width: 80px;
+//     height: 3px;
+//     background: $primary-color;
+//   }
+// }
+
+// .filters {
+//   display: flex;
+//   justify-content: center;
+//   gap: 1rem;
+//   margin-bottom: 2rem;
+//   flex-wrap: wrap;
+  
+//   button {
+//     background: transparent;
+//     color: $light-text;
+//     border: 1px solid $primary-color;
+//     padding: 0.5rem 1.5rem;
+//     border-radius: 30px;
+//     cursor: pointer;
+//     transition: all 0.3s ease;
+    
+//     &.active, &:hover {
+//       background: $primary-color;
+//       color: white;
+//     }
+//   }
+// }
+
+// .projects-grid {
+//   display: grid;
+//   grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+//   gap: 2rem;
+// }
+
+// .project-card {
+//   background: rgba(255, 255, 255, 0.05);
+//   border-radius: 8px;
+//   overflow: hidden;
+//   transition: all 0.3s ease;
+  
+//   &:hover {
+//     transform: translateY(-10px);
+//     box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+    
+//     .project-links {
+//       opacity: 1;
+//     }
+//   }
+// }
+
+// .project-image {
+//   position: relative;
+//   height: 250px;
+//   overflow: hidden;
+  
+//   img {
+//     width: 100%;
+//     height: 100%;
+//     object-fit: cover;
+//     transition: transform 0.5s ease;
+//   }
+  
+//   &:hover img {
+//     transform: scale(1.1);
+//   }
+// }
+
+// .project-links {
+//   position: absolute;
+//   top: 0;
+//   left: 0;
+//   width: 100%;
+//   height: 100%;
+//   background: rgba(0, 154, 75, 0.8);
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+//   gap: 1rem;
+//   opacity: 0;
+//   transition: opacity 0.3s ease;
+  
+//   a {
+//     color: white;
+//     font-size: 1.5rem;
+//     width: 50px;
+//     height: 50px;
+//     border-radius: 50%;
+//     background: rgba(0, 0, 0, 0.5);
+//     display: flex;
+//     justify-content: center;
+//     align-items: center;
+//     transition: all 0.3s ease;
+    
+//     &:hover {
+//       background: black;
+//       transform: scale(1.1);
+//     }
+//   }
+// }
+
+// .project-info {
+//   padding: 1.5rem;
+  
+//   h3 {
+//     margin: 0 0 0.5rem;
+//     font-size: 1.3rem;
+    
+//   }
+  
+//   span {
+//     color: rgba(255, 255, 255, 0.7);
+//     font-size: 0.9rem;
+//   }
+// }
+
+// /* Categorías de colores */
+// .project-card.web-dev {
+//   border-top: 3px solid #3498db;
+
+//   .project-info h3 {
+//     color: #3498db;
+//   }
+// }
+
+// .project-card.app-dev {
+//   border-top: 3px solid #9b59b6;
+
+//   .project-info h3 {
+//     color: #9b59b6;
+//   }
+// }
+
+// .project-card.cou-cer {
+//   border-top: 3px solid #e74c3c;
+
+//   .project-info h3 {
+//     color: #e74c3c;
+//   }
+// }
+
+
+// /* Responsive */
+// @media (max-width: 768px) {
+//   .projects-grid {
+//     grid-template-columns: 1fr;
+//   }
+  
+//   .section-title {
+//     font-size: 2rem;
+//   }
+// }

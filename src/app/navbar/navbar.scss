@@ -1,0 +1,393 @@
+// =============================================
+// Variables y Mixins
+// =============================================
+$breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+  xxl: 1400px
+);
+
+@mixin respond-to($breakpoint) {
+  @if map-has-key($breakpoints, $breakpoint) {
+    @media (min-width: map-get($breakpoints, $breakpoint)) {
+      @content;
+    }
+  }
+}
+
+@mixin respond-to-max($breakpoint) {
+  @if map-has-key($breakpoints, $breakpoint) {
+    $max-width: map-get($breakpoints, $breakpoint) - 1px;
+    @media (max-width: #{$max-width}) {
+      @content;
+    }
+  }
+}
+
+* {
+  box-sizing: border-box; // Fundamental para cálculos correctos de ancho
+}
+
+body {
+  overflow-x: hidden; // Previene scroll horizontal
+  width: 100vw;
+}
+
+// =============================================
+// Estilos Base del Navbar
+// =============================================
+.navbar {
+  position: relative;
+  top: 0;
+  width: 100%;
+  background-color: #009a4b;
+  color: white;
+  box-shadow: 0 2px 8px rgb(0, 0, 0);
+  z-index: 1000;
+
+  .navbar-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0.5rem clamp(1rem, 3vw, 1.5rem);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 60px;
+
+    @include respond-to-max(md) {
+      padding: 0.4rem 1rem;
+      min-height: 50px;
+    }
+
+    @include respond-to-max(sm) {
+      padding: 0.3rem 0.8rem;
+      min-height: 44px;
+    }
+  }
+
+  .navbar-brand {
+    font-size: clamp(1.2rem, 3vw, 1.5rem);
+    font-weight: 700;
+    flex-shrink: 0;
+
+    @include respond-to-max(sm) {
+      font-size: 1.1rem;
+    }
+  }
+
+  .navbar-menu {
+    list-style: none;
+    display: flex;
+    gap: clamp(1rem, 2.5vw, 1.5rem);
+    margin: 0;
+    padding: 0;
+
+    @include respond-to-max(md) {
+      display: none;
+    }
+
+    li {
+      a {
+        color: white;
+        text-decoration: none;
+        font-weight: 500;
+        font-size: clamp(0.9rem, 2vw, 1rem);
+        transition: color 0.3s ease;
+        white-space: nowrap;
+
+        &.active,
+        &:hover {
+          color: #c7f0b8;
+        }
+      }
+    }
+  }
+
+  .language-select {
+    background: transparent;
+    border: 1px solid white;
+    border-radius: 5px;
+    color: white;
+    padding: 0.3rem 0.5rem;
+    cursor: pointer;
+    font-size: 0.85rem;
+    min-width: 60px;
+    transition: all 0.2s ease;
+
+    @include respond-to-max(md) {
+      display: none;
+    }
+
+    &:hover {
+      background: rgba(255, 255, 255, 0.1);
+    }
+
+    option {
+      color: black;
+      background: white;
+    }
+  }
+
+  .burger {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    gap: 4px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0.5rem;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+
+    @include respond-to-max(md) {
+      display: flex;
+    }
+
+    &:hover {
+      background-color: rgba(255, 255, 255, 0.1);
+    }
+
+    span {
+      display: block;
+      width: 22px;
+      height: 2px;
+      background: white;
+      border-radius: 2px;
+      transition: all 0.3s ease;
+    }
+
+    &.active {
+      span:nth-child(1) {
+        transform: rotate(45deg) translate(4px, 4px);
+      }
+      span:nth-child(2) {
+        opacity: 0;
+      }
+      span:nth-child(3) {
+        transform: rotate(-45deg) translate(4px, -4px);
+      }
+    }
+  }
+
+  .navbar-menu-mobile {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: darken(#009a4b, 5%);
+    padding: 0.8rem 1rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    transform: translateY(-100%);
+    opacity: 0;
+    transition: all 0.3s ease;
+    max-height: 0;
+    overflow: hidden;
+
+    @include respond-to-max(md) {
+      &.open {
+        display: flex !important;
+        flex-direction: row !important;
+        flex-wrap: wrap !important;
+        align-items: center !important;
+        justify-content: space-between !important;
+        transform: translateY(0);
+        opacity: 1;
+        max-height: none;
+        overflow-x: auto;
+        white-space: nowrap;
+
+        li {
+          flex-shrink: 0 !important;
+          margin-right: 0.6rem !important;
+
+          &:last-child {
+            margin-right: 0 !important;
+          }
+
+          a {
+            display: inline-flex !important;
+            align-items: center !important;
+            height: 100% !important;
+            color: white !important;
+            text-decoration: none !important;
+            font-weight: 500 !important;
+            font-size: 0.9rem !important;
+            padding: 0.5rem 0.8rem !important;
+            border-radius: 4px !important;
+            transition: all 0.2s ease !important;
+
+            &.active {
+              background-color: rgba(255, 255, 255, 0.2) !important;
+              color: #c7f0b8 !important;
+            }
+
+            &:hover {
+              background-color: rgba(255, 255, 255, 0.15) !important;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .mobile-menu-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.4);
+    z-index: 999;
+    backdrop-filter: blur(2px);
+
+    &.active {
+      display: block;
+    }
+  }
+}
+
+// Añadido: Margen superior para el contenido principal
+// .main-content {
+//   margin-top: 60px; // Ajusta según la altura de tu navbar
+
+//   @include respond-to-max(md) {
+//     margin-top: 48px;
+//   }
+
+//   @include respond-to-max(sm) {
+//     margin-top: 44px;
+//   }
+// }
+
+// .navbar {
+//   position: fixed;
+//   top: 0;
+//   width: 100%;
+//   background-color: #009a4b; // verde nodos
+//   color: white;
+//   box-shadow: 0 2px 8px rgb(0, 0, 0);
+//   z-index: 1000;
+
+//   .navbar-container {
+//     max-width: 1200px;
+//     margin: 0 auto;
+//     padding: 0.5rem 1.5rem;
+//     display: flex;
+//     align-items: center;
+//     justify-content: space-between;
+//   }
+
+//   .navbar-brand {
+//     font-size: 1.5rem;
+//     font-weight: 700;
+//   }
+
+//   .navbar-menu {
+//     list-style: none;
+//     display: flex;
+//     gap: 1.5rem;
+
+//     li {
+//       a {
+//         color: white;
+//         text-decoration: none;
+//         font-weight: 500;
+//         transition: color 0.3s ease;
+
+//         &.active,
+//         &:hover {
+//           color: #c7f0b8; // un verde claro para hover
+//         }
+//       }
+//     }
+//   }
+
+//   .language-select {
+//     background: transparent;
+//     border: 1px solid white;
+//     border-radius: 5px;
+//     color: white;
+//     padding: 0.25rem 0.5rem;
+//     cursor: pointer;
+
+//     option {
+//       color: black;
+//     }
+//   }
+
+//   .burger {
+//     display: none;
+//     flex-direction: column;
+//     gap: 5px;
+//     background: none;
+//     border: none;
+//     cursor: pointer;
+
+//     span {
+//       display: block;
+//       width: 25px;
+//       height: 3px;
+//       background: white;
+//       border-radius: 2px;
+//     }
+//   }
+
+//   /* Menú móvil oculto */
+//   .navbar-menu-mobile {
+//     display: none;
+//     flex-direction: column;
+//     list-style: none;
+//     background-color: #009a4b;
+//     position: absolute;
+//     top: 56px; // altura navbar
+//     width: 100%;
+//     left: 0;
+//     padding: 1rem 0;
+
+//     &.open {
+//       display: flex;
+//     }
+
+//     li {
+//       text-align: center;
+//       margin: 0.5rem 0;
+
+//       a {
+//         color: white;
+//         text-decoration: none;
+//         font-weight: 600;
+//         font-size: 1.1rem;
+
+//         &:hover {
+//           color: #c7f0b8;
+//         }
+//       }
+
+//       .language-select-mobile {
+//         width: 60%;
+//         margin: 0 auto;
+//         background: white;
+//         color: #009a4b;
+//         border-radius: 5px;
+//         padding: 0.25rem;
+//         font-weight: 700;
+//       }
+//     }
+//   }
+
+//   /* Responsive */
+//   @media (max-width: 768px) {
+//     .navbar-menu {
+//       display: none;
+//     }
+//     .burger {
+//       display: flex;
+//     }
+//   }
+// }

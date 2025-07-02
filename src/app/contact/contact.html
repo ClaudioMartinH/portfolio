@@ -1,0 +1,118 @@
+<footer
+  class="text-center text-white"
+  style="background-color: #3c46434b"
+  id="contact"
+>
+  <div class="hero-content scroll-animate">
+    <!-- Grid container -->
+    <div class="container pt-4">
+      <!-- Section: Social media -->
+      <section class="mb-4">
+        <!-- CV -->
+        <a
+          mdbRipple
+          rippleColor="dark"
+          class="btn btn-link btn-floating btn-lg text-body m-1"
+          [href]="cvLink"
+          [attr.download]="cvLink.split('/').pop()"
+          role="button"
+        >
+          <i class="bi bi-download"></i>
+        </a>
+
+        <!-- Twitter -->
+        <a
+          mdbRipple
+          rippleColor="dark"
+          class="btn btn-link btn-floating btn-lg text-body m-1"
+          href="https://twitter.com/martinherranzc"
+          role="button"
+          ><i class="fab fa-twitter"></i
+        ></a>
+
+        <!-- Google -->
+        <a
+          mdbRipple
+          rippleColor="dark"
+          class="btn btn-link btn-floating btn-lg text-body m-1"
+          href="mailto:martinherranzc&#64;gmail.com"
+          role="button"
+          ><i class="fab fa-google"></i
+        ></a>
+
+        <!-- Linkedin -->
+        <a
+          mdbRipple
+          rippleColor="dark"
+          class="btn btn-link btn-floating btn-lg text-body m-1"
+          href="https://www.linkedin.com/in/claudio-martin-herranz"
+          role="button"
+          ><i class="fab fa-linkedin"></i
+        ></a>
+        <!-- Github -->
+        <a
+          mdbRipple
+          rippleColor="dark"
+          class="btn btn-link btn-floating btn-lg text-body m-1"
+          href="https://github.com/ClaudioMartinH"
+          role="button"
+          ><i class="fab fa-github"></i
+        ></a>
+      </section>
+    </div>
+    <div class="footer-container">
+      <div
+        class="text-center text-body p-3"
+        style="background-color: #24abffb2"
+      >
+        © 2025 Copyright:
+        <a class="text-body">Claudio Martín Herranz</a><br />
+        <a>Visits: {{ visitCount }}</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- 
+<link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+/>
+<footer class="footer" id="contact">
+  <div class="container">
+    <div class="footer-content">
+      <div class="footer-info">
+        <h2 class="footer-title">Contact Me</h2>
+        <p><i class="fa fa-user"></i> Claudio Martin Herranz</p>
+        <p><i class="fa fa-tag"></i> Software & Web Developer</p>
+        <p><i class="fa fa-tag"></i> Office365 Support Engineer</p>
+        <p><i class="fa fa-map-marker"></i> Barcelona, Catalunya, SPAIN</p>
+        <p>
+          <i class="fa fa-envelope"></i>
+          <a href="mailto:martinherranzc&#64;gmail.com">martinherranzc&#64;gmail.com</a>
+        </p>
+        <p>
+          <i class="fa fa-file-download"></i>
+          <a href="./img/CV-claudimartin-ENG.pdf" download class="cv-link">Get my CV</a>
+        </p>
+      </div>
+
+      <div class="footer-social">
+        <h3>Find me online</h3>
+        <div class="social-icons">
+          <a href="https://twitter.com/martinherranzc" target="_blank" rel="noopener noreferrer">
+            <i class="fab fa-twitter"></i>
+          </a>
+          <a href="https://www.linkedin.com/in/claudio-martin-herranz" target="_blank" rel="noopener noreferrer">
+            <i class="fab fa-linkedin"></i>
+          </a>
+          <a href="https://github.com/ClaudioMartinH" target="_blank" rel="noopener"><i class="fab fa-github"></i></a>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>© 2025 Claudio Martin Herranz. All rights reserved.</p>
+    </div>
+  </div>
+</footer> -->

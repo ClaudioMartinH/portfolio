@@ -1,1 +1,107 @@
-/* You can add global styles to this file, and also import other style files */
+
+@use "igniteui-angular/theming" as *;
+@include core();
+@include typography($font-family: $material-typeface, $type-scale: $material-type-scale);
+@include theme($default-palette);
+@import 'minireset.css/minireset';
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+:root {
+  --font-system: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 
+                Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  --font-display: 'Inter', var(--font-system); /* Inter es muy similar a SF Pro */
+}
+
+body {
+  overflow-x: hidden; // Previene scroll horizontal
+  width: 100vw;
+  font-family: var(--font-display);
+  font-weight: 300;
+  letter-spacing: -0.5px;
+  line-height: 1.6;
+  background: 
+    linear-gradient(135deg, #06060680 0%, #00000090 100%),
+    url('assets/img/pexels-cottonbro-9668535.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed; // <-- Esto hace que la imagen se quede fija
+  min-height: 100vh;
+}
+* {
+  box-sizing: border-box; // Fundamental para cálculos correctos de ancho
+}
+
+@font-face {
+  font-family: 'Milanello';  // ¡El nombre que quieras usar!
+  src: url('assets/fonts/Milanello.otf');
+  font-weight: normal;  // Ajusta según la variante (500, 700, etc.)
+  font-style: normal;   // O "italic" si es cursiva
+}
+
+// Breakpoints genéricos
+$breakpoint-mobile:  480px;
+$breakpoint-tablet:  768px;
+$breakpoint-laptop:  1024px;
+$breakpoint-desktop: 1200px;
+$breakpoint-large:   1600px;
+
+// Media queries globales
+
+// Móviles pequeños y menos (menos o igual a 480px)
+@media (max-width: $breakpoint-mobile) {
+  body {
+    font-size: 14px;
+  }
+
+  // Ejemplo para nav compacta
+//   nav {
+//     flex-direction: ;
+//     font-size: 0.9rem;
+//   }
+// }
+}
+// Móviles grandes y tablets (481px a 768px)
+@media (min-width: #{ $breakpoint-mobile + 1 }) and (max-width: #{ $breakpoint-tablet }) {
+  body {
+    font-size: 15px;
+  }
+
+  // Ejemplo para contenido adaptado
+  .container {
+    padding: 1rem;
+  }
+}
+
+// Tablets pequeñas y laptops (769px a 1024px)
+@media (min-width: #{ $breakpoint-tablet + 1 }) and (max-width: #{ $breakpoint-laptop }) {
+  body {
+    font-size: 16px;
+  }
+
+  // Ejemplo para grillas con menos columnas
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+// Laptops grandes y desktops (1025px a 1200px)
+@media (min-width: #{ $breakpoint-laptop + 1 }) and (max-width: #{ $breakpoint-desktop }) {
+  body {
+    font-size: 17px;
+  }
+  // Ajustes específicos para pantallas grandes
+}
+
+// Desktops grandes y pantallas ultra grandes (1201px en adelante)
+@media (min-width: #{ $breakpoint-desktop + 1 }) {
+  body {
+    font-size: 18px;
+  }
+
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+}
+

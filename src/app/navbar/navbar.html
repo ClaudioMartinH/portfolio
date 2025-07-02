@@ -1,0 +1,43 @@
+<nav class="navbar">
+  <div class="navbar-container">
+    <div class="navbar-brand">MyApp</div>
+
+    <!-- Menú escritorio -->
+    <ul class="navbar-menu">
+      <li><a routerLink="/home" routerLinkActive="active">Home</a></li>
+      <li><a routerLink="/about" routerLinkActive="active">About</a></li>
+      <li><a routerLink="/contact" routerLinkActive="active">Contact</a></li>
+    </ul>
+
+    <!-- Selector idioma escritorio -->
+    <select class="language-select" (change)="changeLanguage($event)">
+      <option value="en">EN</option>
+      <option value="es">ES</option>
+      <option value="ca">CA</option>
+    </select>
+
+    <!-- Botón móvil -->
+    <button class="burger" (click)="toggleMenu()" [class.active]="menuOpen" aria-label="Menu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </div>
+
+  <!-- Menú móvil -->
+  <ul class="navbar-menu-mobile" [class.open]="menuOpen">
+    <li><a routerLink="/home" routerLinkActive="active" (click)="closeMenu()">Home</a></li>
+    <li><a routerLink="/about" routerLinkActive="active" (click)="closeMenu()">About</a></li>
+    <li><a routerLink="/contact" routerLinkActive="active" (click)="closeMenu()">Contact</a></li>
+    <li>
+      <select class="language-select-mobile" (change)="changeLanguage($event)">
+        <option value="en">EN</option>
+        <option value="es">ES</option>
+        <option value="ca">CA</option>
+      </select>
+    </li>
+  </ul>
+
+  <!-- Overlay -->
+  <div class="mobile-menu-overlay" [class.active]="menuOpen" (click)="closeMenu()"></div>
+</nav>

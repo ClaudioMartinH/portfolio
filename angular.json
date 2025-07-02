@@ -18,33 +18,48 @@
           "builder": "@angular/build:application",
           "options": {
             "browser": "src/main.ts",
-            "polyfills": [
-              "zone.js"
-            ],
+            "polyfills": ["zone.js"],
             "tsConfig": "tsconfig.app.json",
             "inlineStyleLanguage": "scss",
             "assets": [
+              "src/assets",
+              "src/favicon.ico",
               {
                 "glob": "**/*",
-                "input": "public"
+                "input": "node_modules/igniteui-angular/lib/core/styles/themes",
+                "output": "./assets/themes"
+              },{
+                "glob": "**/*",
+                "input": "node_modules/igniteui-angular/assets/icons",
+                "output": "./assets/icons/"
               }
             ],
             "styles": [
+              "node_modules/igniteui-angular/styles/igniteui-angular.css",
               "src/styles.scss"
-            ]
+            ],
+
+            "scripts": [
+              "src/assets/js/main.js"
+            ],
+            "stylePreprocessorOptions": {
+              "includePaths": [
+                "node_modules"
+              ]
+            }
           },
           "configurations": {
             "production": {
               "budgets": [
                 {
                   "type": "initial",
-                  "maximumWarning": "500kB",
-                  "maximumError": "1MB"
+                  "maximumWarning": "2mb",
+                  "maximumError": "5mb"
                 },
                 {
                   "type": "anyComponentStyle",
-                  "maximumWarning": "4kB",
-                  "maximumError": "8kB"
+                  "maximumWarning": "20kb",
+                  "maximumError": "30kb"
                 }
               ],
               "outputHashing": "all"
@@ -72,13 +87,17 @@
         "extract-i18n": {
           "builder": "@angular/build:extract-i18n"
         },
+        "lint": {
+          "builder": "@angular/build:tslint",
+          "options": {
+            "tsConfig": ["tsconfig.app.json", "tsconfig.spec.json"],
+            "exclude": ["**/node_modules/**"]
+          }
+        },
         "test": {
           "builder": "@angular/build:karma",
           "options": {
-            "polyfills": [
-              "zone.js",
-              "zone.js/testing"
-            ],
+            "polyfills": ["zone.js", "zone.js/testing"],
             "tsConfig": "tsconfig.spec.json",
             "inlineStyleLanguage": "scss",
             "assets": [
@@ -89,10 +108,18 @@
             ],
             "styles": [
               "src/styles.scss"
-            ]
+            ],
+            "stylePreprocessorOptions": {
+              "includePaths": [
+                "node_modules"
+              ]
+            }
           }
         }
       }
     }
+  },
+  "cli": {
+    "analytics": false
   }
 }

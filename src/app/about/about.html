@@ -1,0 +1,205 @@
+<section class="about-section" id="about">
+  <div class="container">
+    <div class="about-content">
+      <img src="/assets/img/skills/me_edited.jpg" alt="Claudio Martín Herranz" class="hero-image">
+
+      <div class="about-details">
+        <h2 class="section-title">{{ 'about.sectionTitle' | translate }}</h2>
+
+        <div class="card introduction-card">
+          <h4>{{ 'about.introductionTitle' | translate }}</h4>
+          <p class="intro">
+            {{ 'about.introduction' | translate }}
+          </p>
+        </div>
+
+        <!-- Paneles traducidos -->
+        <ng-container *ngFor="let panelKey of ['keySkills', 'education', 'specializations', 'achievements', 'hobbies']">
+          <div class="expansion-panel">
+            <button class="expansion-header"
+                    (click)="togglePanel(panelKey)"
+                    [ngClass]="panelKey">
+              <h4>
+                <span class="icon" [class.expanded]="expandedPanels[panelKey]">&#x25BC;</span>
+                {{ 'about.panels.' + panelKey | translate }}
+              </h4>
+            </button>
+            <div class="expansion-body" [class.expanded]="expandedPanels[panelKey]">
+              <ul class="skills-list">
+                <li *ngFor="let item of aboutContent[panelKey]">
+                  {{ item }}
+                </li>
+              </ul>
+            </div>
+          </div>
+        </ng-container>
+
+        <p class="call-to-action">
+          <strong>{{ 'about.callToAction' | translate }}</strong>
+        </p>
+        <a href="#contact" class="connect-button">{{ 'about.connectButton' | translate }}</a>
+      </div>
+    </div>
+
+    <div class="skills-section">
+      <div class="skills-column">
+        <h4>{{ 'about.frontendSkills' | translate }}</h4>
+        <div *ngFor="let skill of skills.frontend" class="skill-item">
+          <div class="skill-info">
+            <span class="skill-name">{{ skill.name }}</span>
+            <span class="skill-percentage">{{ skill.percentage }}%</span>
+          </div>
+          <div class="progress-bar-container">
+            <div class="progress-bar" [style.width.%]="skill.percentage"></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="skills-column">
+        <h4>{{ 'about.backendSkills' | translate }}</h4>
+        <div *ngFor="let skill of skills.backend" class="skill-item">
+          <div class="skill-info">
+            <span class="skill-name">{{ skill.name }}</span>
+            <span class="skill-percentage">{{ skill.percentage }}%</span>
+          </div>
+          <div class="progress-bar-container">
+            <div class="progress-bar" [style.width.%]="skill.percentage"></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="skills-column">
+        <h4>{{ 'about.office365Skills' | translate }}</h4>
+        <div *ngFor="let skill of skills.office365" class="skill-item">
+          <div class="skill-info">
+            <span class="skill-name">{{ skill.name }}</span>
+            <span class="skill-percentage">{{ skill.percentage }}%</span>
+          </div>
+          <div class="progress-bar-container">
+            <div class="progress-bar" [style.width.%]="skill.percentage"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- <section class="about-section" id="about">
+  <div class="container">
+    <div class="about-content">
+      <img src="/assets/img/skills/me_edited.jpg" alt="Claudio Martín Herranz" class="hero-image">
+
+      <div class="about-details">
+        <h2 class="section-title">About Me</h2>
+
+        <div class="card introduction-card">
+          <h4>Introduction</h4>
+          <p class="intro">
+            <strong>Hi! I'm Claudio Martin</strong>, a web developer based in
+            <strong>Barcelona</strong> with 20+ years of experience leading teams in hospitality. Technology is my passion, and during 2024 I completed a <strong>web development bootcamp</strong> at ITAcademy.
+            I specialize in backend development with <strong>Node.js</strong> and databases like <strong>MongoDB</strong> and <strong>MySQL/PostgreSQL</strong>. I also have frontend skills in <strong>HTML & CSS</strong>, basic <strong>React & Angular</strong>, and UI design.
+            Currently I'm working as a <strong> Support Engineer</strong> specialized in <strong>Microsoft Office 365 Security & Compliance</strong>
+          </p>
+        </div>
+
+        <ng-container *ngFor="let panel of ['Key Skills', 'Education', 'Specializations', 'Achievements', 'Hobbies']">
+          <div class="expansion-panel">
+            <button class="expansion-header"
+                    (click)="togglePanel(panel)"
+                    [ngClass]="{
+                      'key-skills': panel === 'Key Skills',
+                      'education': panel === 'Education',
+                      'specializations': panel === 'Specializations',
+                      'achievements': panel === 'Achievements',
+                      'hobbies': panel === 'Hobbies'
+                    }">
+              <h4>
+                <span class="icon" [class.expanded]="expandedPanels[panel]">&#x25BC;</span>
+                {{ panel }}
+              </h4>
+            </button>
+            <div class="expansion-body" [class.expanded]="expandedPanels[panel]">
+              <ng-container [ngSwitch]="panel">
+                <ul *ngSwitchCase="'Key Skills'" class="skills-list">
+                  <li>Team management</li>
+                  <li>Real-time problem-solving</li>
+                  <li>Working under pressure</li>
+                  <li>Customer orientation</li>
+                </ul>
+                <ul *ngSwitchCase="'Education'" class="skills-list">
+                  <li><strong>Microsoft SCIM Security & Compliance</strong> intensive formation 2025</li>
+                  <li>Completed a <strong>web development bootcamp</strong> at ITAcademy 2024</li>
+                  <li>Completed a <strong>MBA Business Management</strong> at EAE Business School 2013</li>
+                  <li>Completed a 300h course in <strong>Construction Risk Management </strong> at Generalitat de Catalunya 2009</li>
+                </ul>
+                <ul *ngSwitchCase="'Specializations'" class="skills-list">
+                  <li>Backend: <strong>Node.js</strong>, <strong>MongoDB</strong>, <strong>MySQL/PostgreSQL</strong></li>
+                  <li>Frontend: <strong>HTML & CSS</strong>, basic <strong>React</strong>, UI design</li>
+                  <li>Office365: <strong>Security & Compliance</strong>, <strong>SCIM, MDO, Exchange, Purview & EntraID</strong></li>
+                </ul>
+                <ul *ngSwitchCase="'Achievements'" class="skills-list">
+                  <li>Finalist in <strong>NASA Space Apps Challenge</strong> 2024</li>
+                  <li>Contributing to <strong>ITA Wiki</strong> with AI integration & database migrations 2024 - 2025</li>
+                  <li>2nd place in <strong>Hackathon ITAcademy</strong> 2024.</li>
+                </ul>
+                <ul *ngSwitchCase="'Hobbies'" class="skills-list">
+                  <li>I'm a dog lover, <strong>Logan </strong>is my loyal friend</li>
+                  <li>My favorite music genres are <strong>Rock, Indie, House </strong>&<strong> Electronic</strong></li>
+                  <li>I also love sports like <strong>MotoGP, F1 </strong>& I used to play <strong> football as amateur</strong></li>
+                </ul>
+              </ng-container>
+            </div>
+          </div>
+        </ng-container>
+
+        <p class="call-to-action">
+          <strong>Let's connect! I'm actively seeking new challenges.</strong>
+        </p>
+        <a href="#contact" class="connect-button">Let's Connect!</a>
+      </div>
+    </div>
+
+    <div class="skills-section">
+      <div class="skills-column">
+        <h4>Front End Skills</h4>
+        <div *ngFor="let skill of skills.frontend" class="skill-item">
+          <div class="skill-info">
+            <span class="skill-name">{{ skill.name }}</span>
+            <span class="skill-percentage">{{ skill.percentage }}%</span>
+          </div>
+          <div class="progress-bar-container">
+            <div class="progress-bar" [style.width.%]="skill.percentage"></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="skills-column">
+        <h4>Back End Skills</h4>
+        <div *ngFor="let skill of skills.backend" class="skill-item">
+          <div class="skill-info">
+            <span class="skill-name">{{ skill.name }}</span>
+            <span class="skill-percentage">{{ skill.percentage }}%</span>
+          </div>
+          <div class="progress-bar-container">
+            <div class="progress-bar" [style.width.%]="skill.percentage"></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="skills-column">
+        <h4>Office365 Skills</h4>
+        <div *ngFor="let skill of skills.office365" class="skill-item">
+          <div class="skill-info">
+            <span class="skill-name">{{ skill.name }}</span>
+            <span class="skill-percentage">{{ skill.percentage }}%</span>
+          </div>
+          <div class="progress-bar-container">
+            <div class="progress-bar" [style.width.%]="skill.percentage"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+ -->

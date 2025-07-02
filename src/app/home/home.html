@@ -1,0 +1,54 @@
+<!-- <section class="hero-section" id="home">
+  <nav class="smooth-header">
+    <ul>
+      <li><a href="#home" class="nav-link">Home</a></li>
+      <li><a href="#about" class="nav-link">About</a></li>
+      <li><a href="#experience" class="nav-link">Experience</a></li>
+      <li><a href="#projects" class="nav-link">Projects</a></li>
+      <li><a href="#contact" class="nav-link">Contact</a></li>
+    </ul>
+  </nav>
+  <div class="hero-container">
+    <img src="/assets/img/nasa3.jpg" alt="Background" class="header-picture" />
+    <div class="hero-content">
+      <h1 class="hero-title">Hello! I'm Claudio Martín Herranz</h1>
+      <div class="profession-container">
+        <span class="static-text">I'm </span>
+        <span class="dynamic-text">{{ currentProfession }}</span>
+        <span class="cursor">|</span>
+      </div>
+    </div>
+  </div>
+</section> -->
+
+<section class="hero-section" id="home">
+  <nav class="smooth-header">
+    <ul>
+      <li><a href="#home" class="nav-link">{{ 'home.nav.home' | translate }}</a></li>
+      <li><a href="#about" class="nav-link">{{ 'home.nav.about' | translate }}</a></li>
+      <li><a href="#experience" class="nav-link">{{ 'home.nav.experience' | translate }}</a></li>
+      <li><a href="#projects" class="nav-link">{{ 'home.nav.projects' | translate }}</a></li>
+      <li><a href="#contact" class="nav-link">{{ 'home.nav.contact' | translate }}</a></li>
+    </ul>
+    <select
+  [value]="currentLang"
+  (change)="changeLanguage($event)"
+  class="select-language"
+>
+  <option value="es">ESP</option>
+  <option value="ca">CAT</option>
+  <option value="en">ENG</option>
+</select>
+  </nav>
+  <div class="hero-container">
+    <img src="/assets/img/nasa3.jpg" alt="Background" class="header-picture">
+    <div class="hero-content">
+      <h1 class="hero-title">{{ 'home.hero.title' | translate }}</h1>
+      <div class="profession-container">
+        <span class="static-text">{{ 'home.hero.staticText' | translate }}</span>
+        <span class="dynamic-text">{{ currentProfession }}</span>
+        <span class="cursor">|</span>
+      </div>
+    </div>
+  </div>
+</section>

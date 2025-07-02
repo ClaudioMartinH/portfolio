@@ -1,0 +1,50 @@
+<section id="experience" class="experience-section">
+  <h2 class="section-title">{{ 'experience.title' | translate }}</h2>
+
+  <div class="experience-grid">
+    <igx-card
+      *ngFor="let exp of experiences; let i = index"
+      class="experience-card"
+      [ngClass]="{ 'highlighted': i === 0 }"
+    >
+      <igx-card-media>
+        <img
+          [src]="exp.picture"
+          alt="Cover for {{ exp.company }}"
+          class="card-cover"
+        />
+      </igx-card-media>
+
+      <igx-card-header class="experience-header">
+        <div class="experience-meta">
+          <span class="experience-date">{{ exp.date | translate }}</span>
+          <span class="experience-mode" [ngClass]="exp.modeClass">
+            {{ exp.mode | translate }}
+          </span>          
+        </div>
+        <div class="company-info">
+          <img
+            [src]="exp.logo"
+            alt="{{ exp.company }} logo"
+            class="experience-logo-small"
+          />
+          <div class="company-text">
+            <h3 class="experience-company">{{ exp.company | translate }}</h3>
+            <h4 class="experience-position">{{ exp.position | translate }}</h4>
+          </div>
+        </div>
+      </igx-card-header>
+
+      <igx-card-content class="experience-details">
+        <ul>
+          <li *ngFor="let detail of exp.details">{{ detail | translate }}</li>
+        </ul>
+      </igx-card-content>
+
+      <div class="experience-timeline">
+        <div class="timeline-dot"></div>
+        <div class="timeline-line"></div>
+      </div>
+    </igx-card>
+  </div>
+</section>

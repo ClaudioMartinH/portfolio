@@ -1,0 +1,168 @@
+<section class="projects-section" id="projects">
+  <h2 class="section-title">{{ 'projects.title' | translate }}</h2>
+
+  <div class="filters">
+    <button
+      *ngFor="let filter of ['all', 'web-dev', 'app-dev', 'cou-cer']"
+      [class.active]="activeFilter === filter"
+      (click)="filterProjects(filter)"
+    >
+      {{ ('projects.filters.' + filter) | translate }}
+    </button>
+  </div>
+
+  <div class="projects-grid">
+    <div
+      class="project-card"
+      *ngFor="let project of filteredProjects"
+      [ngClass]="project.category"
+    >
+      <div class="project-image-container">
+        <img
+          [src]="project.image"
+          [alt]="project.titleKey"
+          class="project-img"
+        />
+        <div class="project-links">
+          <a
+            [href]="project.previewLink"
+            target="_blank"
+            class="preview-link"
+            title="Preview"
+          >
+            <i class="fas fa-eye"></i>
+          </a>
+          <a
+            [href]="project.detailsLink"
+            target="_blank"
+            class="details-link"
+            title="Details"
+          >
+            <i class="fas fa-link"></i>
+          </a>
+        </div>
+      </div>
+
+      <div class="project-info">
+        <h3>{{ 'projects.titles.' + project.titleKey | translate }}</h3>
+        <p>{{ 'projects.descriptions.' + project.descriptionKey | translate }}</p>
+        <p>{{ 'projects.text.' + project.textKey | translate }}</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- <section class="projects-section" id="projects">
+  <h2 class="section-title">{{ 'projects.title' | translate }}</h2>
+
+  <div class="filters">
+    <button
+      *ngFor="let filter of ['all', 'web-dev', 'app-dev', 'cou-cer']"
+      [class.active]="activeFilter === filter"
+      (click)="filterProjects(filter)"
+    >
+      {{ ('projects.filters.' + filter) | translate }}
+    </button>
+  </div>
+
+  <div class="carousel-container">
+    <igx-carousel
+  [navigation]="true"
+  [loop]="true"
+  [interval]="3000"
+  [pause]="true"
+  class="projects-carousel"
+  #carousel
+>
+      <igx-slide *ngFor="let project of filteredProjects" class="project-slide">
+        <div class="project-card" [ngClass]="project.category">
+          <div class="project-image-container">
+            <img
+              [src]="project.image"
+              [alt]="project.titleKey"
+              class="project-img"
+            />
+            <div class="project-links">
+              <a
+                [href]="project.previewLink"
+                target="_blank"
+                class="preview-link"
+                title="Preview"
+              >
+                <i class="fas fa-eye"></i>
+              </a>
+              <a
+                [href]="project.detailsLink"
+                target="_blank"
+                class="details-link"
+                title="Details"
+              >
+                <i class="fas fa-link"></i>
+              </a>
+            </div>
+          </div>
+          
+          <div class="project-info">
+            <h3>{{ 'projects.titles.' + project.titleKey | translate }}</h3>
+            <p> {{ 'projects.descriptions.' + project.descriptionKey | translate }}</p>
+            <p> {{ 'projects.text.' + project.textKey | translate }}</p>
+          </div>
+        </div>
+      </igx-slide>
+    </igx-carousel>
+  </div>
+</section> -->
+
+
+<!-- <section class="projects-section" id="projects">
+    <h2 class="section-title">My Projects</h2>
+    <div class="filters">
+      <button 
+        *ngFor="let filter of ['all', 'web-dev', 'app-dev', 'cou-cer']"
+        [class.active]="activeFilter === filter"
+        (click)="filterProjects(filter)"
+      >
+        {{ filter | titlecase }}
+      </button>
+    </div>
+
+    <div class="carousel-container">
+      <igx-carousel
+        [navigation]="true"
+        [loop]="true"
+        [interval]="3000"
+        [pause]="true"
+        class="projects-carousel"
+      >
+        <igx-slide *ngFor="let project of filteredProjects" class="project-slide">
+          <div class="project-card" [ngClass]="project.category">
+            <div class="project-image-container">
+              <img [src]="project.image" [alt]="project.title" class="project-img"/>
+              <div class="project-links">
+                <a
+              [href]="project.previewLink"
+              target="_blank"
+              class="preview-link"
+              title="Preview"
+            >
+              <i class="fas fa-eye"></i>
+            </a>
+            <a
+              [href]="project.detailsLink"
+              target="_blank"
+              class="details-link"
+              title="Details"
+            >
+              <i class="fas fa-link"></i>
+            </a>
+              </div>
+            </div>
+            <div class="project-info">
+              <h3>{{ project.title }}</h3>
+              <p>{{ project.description }}</p>
+            </div>
+          </div>
+        </igx-slide>
+      </igx-carousel>
+    </div>
+</section> -->

@@ -14,7 +14,8 @@
         "desarrollador web",
         "desarrollador backend",
         "ingeniero de soporte"
-      ]
+      ],
+      "bio": "Aprendizaje constante. Innovación permanente. Diseños con propósito. Diseño soluciones elegantes que se adaptan… y lo hago con pasión."
     }
   },
   "about": {
@@ -63,6 +64,7 @@
   },
   "experience": {
     "title": "Mi Experiencia",
+    "bio": "Una pequeña ventana a los proyectos y experiencias que han marcado mi camino profesional. Aquí encontrarás no solo lo que he hecho, sino la pasión y los valores que pongo en cada línea de código, cada desafío y cada solución creada.",
     "remote": "Remoto",
     "onsite": "Presencial",
     "concentrix": {
@@ -129,6 +131,7 @@
   },
   "projects": {
     "title": "Mis Proyectos",
+    "bio": "Aquí se encuentran mis proyectos más destacados, certificados de formación y diplomas de participación en Hackathons. Se pueden visitar los proyectos haciendo clic en los enlaces que aparecen al ver las tarjetas.",
     "filters": {
       "all": "Todos",
       "web-dev": "Desarrollo Web",
@@ -142,10 +145,12 @@
       "hackathon": "Hackathon"
     },
     "titles": {
-      "chatapp": "Chat App de ITAcademy",
-      "dicegame": "Juego de dados - Node-React-SQLite",
-      "activityapp": "Aplicación de Actividades",
-      "incloumap": "Hackathón - InclouMap - Finalista",
+      "chatapp": "Chat App",
+      "itawiki": "ITAcademy WIKI",
+      "dicegame": "Juego de dados",
+      "activityapp": "AppActivitats",
+      "taskflow": "Taskflow",
+      "incloumap": "InclouMap",
       "nodecert": "Certificado Bootcamp NodeJs",
       "nasachallenge": "NASA Space Apps Challenge 2024",
       "hackathonso": "Hackathón 2024 - Finalista",
@@ -154,8 +159,10 @@
     },
     "text": {
       "chatapptext": "Aplicación de chat desarrollada con Node.js y React, enfocada en la comunicación en tiempo real.",
+      "itawikitext": "Aplicación desarrollada con React y NodeJS, base de datos PostgreSQL, que permite registrarse, compartir, consumir y valorar recursos de aprendizaje en el mundo de la programación.",
       "dicegametext": "Juego de dados interactivo utilizando Node.js, React y SQLite para la gestión de datos.",
       "activityapptext": "Aplicación para gestionar actividades diarias, desarrollada con tecnologías modernas.",
+      "taskflowtext": "Aplicación de gestión de tareas con conexión en tiempo real (sockets) y sistema drag&drop para tarjetas",
       "incloumaptext": "Proyecto finalista en el Hackathon InclouMap, centrado en la inclusión social a través de tecnología.",
       "nodecerttext": "Certificado obtenido tras completar el Bootcamp de Node.js en ITAcademy.",
       "nasachallengetext": "Participación destacada en el NASA Space Apps Challenge 2024.",

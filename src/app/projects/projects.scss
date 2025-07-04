@@ -1,4 +1,33 @@
 /* Variables */
+// Breakpoints
+$breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+  xxl: 1400px,
+);
+
+// Mixin para media queries
+@mixin respond-to($breakpoint) {
+  @if map-has-key($breakpoints, $breakpoint) {
+    @media (min-width: map-get($breakpoints, $breakpoint)) {
+      @content;
+    }
+  }
+}
+
+@mixin respond-to-max($breakpoint) {
+  @if map-has-key($breakpoints, $breakpoint) {
+    @media (max-width: #{map-get($breakpoints, $breakpoint) - 1px}) {
+      @content;
+    }
+  }
+}
+
+
+
 $primary-color: #24abffb2;
 $dark-bg: #1a1a1a10;
 $light-text: #f8f9fa;
@@ -142,15 +171,43 @@ body {
     }
   }
 }
+.bio {
+  margin-top: 0%;
+}
+
+// Estilos para la bio
+.hero-bio {
+  font-family: "Apple", sans-serif;
+  font-weight: 500;
+  font-size: clamp(1rem, 2vw, 1.5rem);
+  line-height: 1.6;
+  max-width: auto;
+  color: rgba(255, 255, 255, 0.85);
+  margin-bottom:4rem;
+  text-align: center;
+
+  @include respond-to-max(md) {
+    max-width: 85%;
+    margin-top: 0;
+    margin-left: 7%;
+    text-align: center;
+  }
+}
 
 /* TÍTULO - Estilo original conservado */
 .section-title {
   font-size: 3rem;
   text-align: center;
-  margin-bottom: 10rem;
+  margin-bottom: 2rem;
   color: $primary-color;
   position: relative;
   font-weight: 700;
+  background: linear-gradient(90deg, #1e90ff, #00c9ff, #92fe9d);
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: shine 4s linear infinite;
 
   &::after {
     content: '';
@@ -160,7 +217,7 @@ body {
     transform: translateX(-50%);
     width: 50%;
     height: 10px;
-    background: #24abffb2;
+    background: #1e90ff;
   }
 }
 
@@ -231,7 +288,7 @@ body {
     margin-bottom: 2rem;
 
     button {
-      padding: 0.6rem 1.2rem;
+      // padding: 0.6rem 1.2rem;
       font-size: 0.95rem;
       margin-top: 0;
     }

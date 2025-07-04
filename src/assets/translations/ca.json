@@ -14,7 +14,8 @@
         "desenvolupador web",
         "desenvolupador backend",
         "enginyer de suport"
-      ]
+      ],
+      "bio": "Cada dia aprenent, cada dia innovant. Dissenyo projectes adaptables, sobris i escalables... i al camí, he descobert la meva passió." 
     }
   },
   "about": {
@@ -63,6 +64,7 @@
   },
   "experience": {
     "title": "La Meva Experiència",
+    "bio":"Una petita finestra als projectes i experiències que han marcat el meu camí professional. Aquí hi trobaràs no només el què he fet, sinó la passió i els valors que poso en cada línia de codi, cada repte i cada solució creada.",
     "remote": "Remot",
     "onsite": "Presencial",
     "concentrix": {
@@ -129,6 +131,7 @@
   },
   "projects": {
     "title": "Els Meus Projectes",
+    "bio": "Aquí es troben els meus projectes més destacats, certificats de formació i diplomes de participació en Hackathons. Es poden visitar els projectes fent clic als links que apareixen en veure les targetes",
     "filters": {
       "all": "Tots",
       "web-dev": "Webs",
@@ -142,10 +145,12 @@
       "hackathon": "Hackathon"
     },
     "titles": {
-      "chatapp": "Aplicació de Xat - ITAcademy",
-      "dicegame": "Joc de Daus - Node-React-SQLite",
-      "activityapp": "Aplicació d'Activitats",
-      "incloumap": "Hackathó - InclouMap - Finalista",
+      "chatapp": "Xat App",
+      "itawiki": "ITAcademy WIKI",
+      "dicegame": "Joc de daus",
+      "activityapp": "AppActivitats",
+      "taskflow": "Taskflow",
+      "incloumap": "InclouMap",
       "nodecert": "Certificat Bootcamp NodeJs",
       "nasachallenge": "NASA Space Apps Challenge 2024",
       "hackathonso": "Hackathó 2024 - Finalista",
@@ -155,8 +160,10 @@
     
       "text": {
         "chatapptext": "Aplicació de xat desenvolupada durant el bootcamp d'ITAcademy utilitzant Node.js i React. Permet als usuaris enviar missatges en temps real.",
+        "itawikitext": "Aplicació desenvolupada amb React i NodeJS, bbdd PostgreSQL on permet registrar-se, compartir, consumir i valorar recursos d'aprenentatge en el món de la programació",
         "dicegametext": "Joc de daus creat amb Node.js, React i SQLite. Els usuaris poden jugar i registrar els seus resultats.",
         "activityapptext": "Aplicació d'activitats que permet als usuaris crear, editar i eliminar activitats, amb una interfície senzilla i intuïtiva.",
+        "taskflowtext": "Aplicació de gestió de tasques amb connexió en temps real (sockets) i sistema drag&drop per a targetes.",
         "incloumaptext": "Projecte finalista al NASA Space Apps Challenge 2024, que combina mapes interactius amb dades espacials.",
         "nodecerttext": "Certificat obtingut al bootcamp de Node.js, demostrant competències en desenvolupament backend.",
         "nasachallengetext": "Participació destacada al NASA Space Apps Challenge 2024, treballant en solucions innovadores per a problemes globals.",

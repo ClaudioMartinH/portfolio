@@ -29,7 +29,7 @@ export class About implements OnInit {
       { name: 'HTML', percentage: 85 },
       { name: 'CSS', percentage: 75 },
       { name: 'jQuery', percentage: 80 },
-      { name: 'React | Angular', percentage: 60 },
+      { name: 'React | Angular', percentage: 75 },
     ],
     backend: [
       { name: 'NodeJs', percentage: 95 },

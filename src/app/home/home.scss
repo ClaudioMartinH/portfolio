@@ -5,7 +5,7 @@ $breakpoints: (
   md: 768px,
   lg: 992px,
   xl: 1200px,
-  xxl: 1400px
+  xxl: 1400px,
 );
 
 // Mixin para media queries
@@ -34,44 +34,42 @@ body {
   width: 100vw;
 }
 
+// .hero-section {
+//   height: 100vh;
+//   height: 100dvh; // Soporte para navegadores modernos
+//   display: flex;
+//   align-items: center;
+//   justify-content: center;
+//   color: white;
+//   text-align: center;
+//   position: relative;
+//   overflow: hidden;
+
+//   @include respond-to-max(md) {
+//     min-height: 100vh;
+//     min-height: 100dvh;
+//   }
+// }
 
 .hero-section {
   height: 100vh;
-  height: 100dvh; // Soporte para navegadores modernos
+  height: 100dvh;
   display: flex;
+  justify-content: flex-start; // Fuerza alineación izquierda
   align-items: center;
-  justify-content: center;
   color: white;
-  text-align: center;
+  text-align: left;
   position: relative;
   overflow: hidden;
-
-  @include respond-to-max(md) {
-    min-height: 100vh;
-    min-height: 100dvh;
-  }
+  // padding-left: 5%; // Margen mínimo izquierdo
 }
 
-.hero-container {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-  align-items: center;
-  padding-bottom: clamp(5vh, 8vh, 12vh);
-
-  @include respond-to-max(md) {
-    justify-content: center;
-    padding-bottom: 5vh;
-  }
-
-  @include respond-to-max(sm) {
-    padding: 1rem;
-    padding-bottom: 3vh;
-  }
-}
+// .hero-container {
+//   width: 100%;
+//   max-width: none; // Elimina cualquier limitación de ancho
+//   margin: 0;
+//   padding: 0 0; // Padding solo lateral
+// }
 
 .header-picture {
   position: absolute;
@@ -83,11 +81,7 @@ body {
   z-index: -1;
   opacity: 0.9;
   filter: blur(6px);
-  mask-image: radial-gradient(
-    circle at center,
-    white 0%,
-    transparent 80%
-  );
+  mask-image: radial-gradient(circle at center, white 0%, transparent 80%);
 
   @include respond-to-max(md) {
     filter: blur(4px);
@@ -100,41 +94,116 @@ body {
   }
 }
 
-.hero-content {
-  animation: fadeIn 1.5s ease-in-out;
-  max-width: 90%;
-  margin: 0 auto;
-  padding: 2rem;
-  position: relative;
-  z-index: 1;
+// .hero-content {
+//   animation: fadeIn 1.5s ease-in-out;
+//   max-width: 90%;
+//   margin: 0 auto;
+//   padding: 2rem;
+//   position: relative;
+//   z-index: 1;
 
-  @include respond-to-max(lg) {
-    max-width: 95%;
-    padding: 1.5rem;
-  }
+//   @include respond-to-max(lg) {
+//     max-width: 95%;
+//     padding: 1.5rem;
+//   }
+
+//   @include respond-to-max(md) {
+//     max-width: 100%;
+//     padding: 1rem;
+//   }
+
+//   @include respond-to-max(sm) {
+//     padding: 0.5rem;
+//   }
+// }
+
+.hero-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end; // ★ Alinea el contenido abajo
+  align-items: flex-start;   // ★ Alineación izquierda
+  padding: 0 5rem 5rem;     // ★ Padding inferior generoso
+  box-sizing: border-box;
 
   @include respond-to-max(md) {
-    max-width: 100%;
-    padding: 1rem;
+    padding: 0 2rem 3rem;   // ★ Ajuste responsive
+    align-items: center;     // ★ Centrado solo en móvil (opcional)
+    .hero-content {
+      text-align: left !important; // Fuerza alineación izquierda siempre
+    }
   }
 
   @include respond-to-max(sm) {
-    padding: 0.5rem;
+    padding: 0 1rem 2rem;
   }
 }
 
+.hero-content {
+  max-width: 1600px;
+  width: 100%;              // ★ Ocupa todo el ancho disponible
+  margin: 0;                // ★ Elimina margen horizontal
+  padding: 0;               // ★ Elimina padding interno
+  text-align: left;         // ★ Alineación texto izquierda
+
+  @include respond-to-max(md) {
+    text-align: center;     // ★ Solo para móviles si lo prefieres
+  }
+}
+.hero-name,
+.professions-static,
+.hero-bio {
+  text-align: left;
+  margin-left: 0;
+  margin-right: auto; // Fuerza alineación izquierda
+  width: auto;
+  display: block;
+}
+
+.hero-name {
+  font-family: "Apple", sans-serif;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  font-size: clamp(3rem, 8vw, 6rem); // Más grande que antes
+  line-height: 1.1;
+  background: linear-gradient(90deg, #1e90ff, #00c9ff, #92fe9d);
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: shine 4s linear infinite;
+  text-align: left;
+  max-width: 80%;
+
+}
+
+// Estilos para la bio
+.hero-bio {
+  font-family: "Apple", sans-serif;
+  font-weight: 500;
+  font-size: clamp(1rem, 2vw, 1.5rem);
+  line-height: 1.6;
+  max-width: 80%;
+  color: rgba(255, 255, 255, 0.85);
+  margin-bottom: 2rem;
+
+  @include respond-to-max(md) {
+    max-width: 80%;
+    margin-top: 0;
+  }
+}
+
+// hasta aqui lo nuevo
+
 .hero-title {
-  font-family: 'Apple', sans-serif;
+  font-family: "Apple", sans-serif;
   font-weight: 500;
   margin-bottom: 0.5rem;
   font-size: clamp(2rem, 6vw, 4rem);
   line-height: 1.2;
-  background: linear-gradient(
-    90deg,
-    #1e90ff,
-    #00c9ff,  
-    #92fe9d  
-  );
+  background: linear-gradient(90deg, #1e90ff, #00c9ff, #92fe9d);
   background-size: 200% auto;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -166,13 +235,17 @@ body {
 }
 
 .profession-container {
-  min-height: clamp(50px, 8vh, 80px);
-  font-size: clamp(1.2rem, 3vw, 2.5rem);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 0.5rem;
+  // min-height: clamp(50px, 8vh, 80px);
+  // font-size: clamp(1.2rem, 3vw, 2.5rem);
+  // display: flex;
+  // justify-content: center;
+  // align-items: center;
+  // flex-wrap: wrap;
+  // gap: 0.5rem;
+  display: block; // Cambia de flex a block
+  text-align: left;
+  width: 100%;
+  margin-left: 0;
   text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.6);
 
   @include respond-to-max(md) {
@@ -300,7 +373,7 @@ body {
     }
 
     &::after {
-      content: '';
+      content: "";
       position: absolute;
       bottom: -4px;
       left: 0;
@@ -333,13 +406,13 @@ body {
 }
 
 .static-text {
-  font-family: 'Apple', sans-serif;
+  font-family: "Apple", sans-serif;
   font-weight: 400;
   color: #f8f9fa;
 }
 
 .dynamic-text {
-  font-family: 'Apple', sans-serif;
+  font-family: "Apple", sans-serif;
   font-weight: 600;
   color: #1e90ff;
   position: relative;
@@ -392,7 +465,7 @@ body {
   .smooth-header .nav-link {
     &:active {
       color: #1e90ff;
-      
+
       &::after {
         width: 100%;
       }
@@ -463,11 +536,11 @@ body {
 
   .smooth-header {
     padding: 0.5rem;
-    
+
     ul {
       gap: 0.8rem;
     }
-    
+
     .nav-link {
       font-size: 0.8rem;
     }
@@ -514,7 +587,6 @@ body {
 
 // }
 
-
 // .hero-content {
 //   animation: fadeIn 1.5s ease-in-out;
 //   max-width: 90%;
@@ -531,8 +603,8 @@ body {
 //   background: linear-gradient(
 //     90deg,
 //     #1e90ff,
-//     #00c9ff,  
-//     #92fe9d  
+//     #00c9ff,
+//     #92fe9d
 //   );
 //   background-size: 200% auto;
 //   -webkit-background-clip: text;
@@ -551,7 +623,6 @@ body {
 //   }
 // }
 
-
 // .profession-container {
 //   min-height: 60px;
 //   font-size: clamp(1.5rem, 3vw, 2.5rem);
@@ -561,7 +632,7 @@ body {
 //   flex-wrap: wrap;
 //   gap: 0.5rem;
 //   text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.6);
-  
+
 // }
 // .smooth-header {
 //   position: fixed;
@@ -643,13 +714,11 @@ body {
 // }
 // .smooth-header .nav-link.active {
 //   color: #1e90ff; // Color del link activo
-  
+
 //   &::after {
 //     width: 100% !important; // Subrayado completo
 //   }
 // }
-
-
 
 // .static-text {
 //   font-family: 'Milanello';

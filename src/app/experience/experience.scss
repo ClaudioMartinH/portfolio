@@ -1,3 +1,31 @@
+/* Variables */
+// Breakpoints
+$breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+  xxl: 1400px,
+);
+
+// Mixin para media queries
+@mixin respond-to($breakpoint) {
+  @if map-has-key($breakpoints, $breakpoint) {
+    @media (min-width: map-get($breakpoints, $breakpoint)) {
+      @content;
+    }
+  }
+}
+
+@mixin respond-to-max($breakpoint) {
+  @if map-has-key($breakpoints, $breakpoint) {
+    @media (max-width: #{map-get($breakpoints, $breakpoint) - 1px}) {
+      @content;
+    }
+  }
+}
+
 $node-green:  #24abffb2;
 $node-green-light: rgba(0, 154, 75, 0.1);
 $dark-bg: #1a1a1a;
@@ -16,13 +44,17 @@ $primary-color:  #24abffb2;
 }
 /* Título más destacado */
 .section-title {
-  font-size: 3rem;
-  text-align: center;
-  margin-bottom: 3rem;
-  margin-top: 3rem;
-  color: $primary-color;
-  position: relative;
-  font-weight: 700;
+  font-size: clamp(2rem, 5vw, 3rem);
+        position: relative;
+        font-weight: 700;
+        margin-bottom: 2rem;
+        background: linear-gradient(90deg, #1e90ff, #00c9ff, #92fe9d);
+        background-size: 200% auto;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        animation: shine 4s linear infinite;
+        text-align: center;
 
   &::after {
     content: '';
@@ -32,9 +64,29 @@ $primary-color:  #24abffb2;
     transform: translateX(-50%);
     width: 100%;
     height: 10px;
-    background: #24abffb2;
+    background: #1e90ff;
   }
 }
+// Estilos para la bio
+.hero-bio {
+  font-family: "Apple", sans-serif;
+  font-weight: 500;
+  font-size: clamp(1rem, 2vw, 1.5rem);
+  line-height: 1.6;
+  max-width: auto;
+  color: rgba(255, 255, 255, 0.85);
+  margin-bottom:4rem;
+  text-align: center;
+
+  @include respond-to-max(md) {
+    max-width: 85%;
+    margin-top: 0;
+    margin-left: 7%;
+    text-align: center;
+  }
+}
+
+
 
 .experience-grid {
   display: grid;
@@ -53,7 +105,7 @@ $primary-color:  #24abffb2;
   transform: translateX(-5px) ;
 
   &:hover {
-    transform: translateY(-5px);
+    // transform: translateY(-5px);
     box-shadow: 0 0 10px #1e8fffe0;
   }
 
@@ -124,7 +176,7 @@ $primary-color:  #24abffb2;
     color: rgba(255, 255, 255, 0.723);
 
     &:hover {
-      transform: translateY(-5px);
+      // transform: translateY(-5px);
       box-shadow: 0 12px 25px rgba(0, 0, 0, 0.5);
     }
 

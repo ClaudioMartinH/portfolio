@@ -14,7 +14,8 @@
         "a Web Developer",
         "a Backend Developer",
         "a Support Engineer"
-      ]
+      ],
+      "bio": "Constant learning. Endless innovation. Purposeful designs — and a dash of passion. I craft adaptable, minimalist solutions… and I love every step of it."
     }
   },
   "about": {
@@ -63,6 +64,7 @@
   },
   "experience": {
     "title": "My Experience",
+    "bio": "A glimpse into the projects and experiences that have shaped my professional journey. Here you’ll find not just what I’ve built, but the passion and values I pour into every line of code, every challenge, and every solution crafted.",
     "remote": "Remote",
     "onsite": "On Site",
     "concentrix": {
@@ -130,6 +132,7 @@
 
     "projects": {
       "title": "My Projects",
+      "bio": "Here you can find my most notable projects, training certificates, and Hackathon participation diplomas. Projects can be visited by clicking the links displayed on the cards.",
       "filters": {
         "all": "All",
         "web-dev": "Web Dev",
@@ -143,10 +146,12 @@
         "hackathon": "Hackathon"
       },
       "titles": {
-        "chatapp": "ITAcademy Chat App",
-        "dicegame": "Dice game - Node-React-SQLite",
-        "activityapp": "Activity App",
-        "incloumap": "Hackathon - InclouMap - Finalist",
+        "chatapp": "Chat App",
+        "itawiki": "ITAcademy WIKI",
+        "dicegame": "Dice Game",
+        "activityapp": "AppActivitats",
+        "taskflow": "Taskflow",
+        "incloumap": "InclouMap",
         "nodecert": "NodeJs Bootcamp Certificate",
         "nasachallenge": "NASA Space Apps Challenge 2024",
         "hackathonso": "Hackathon 2024 - Finalist",
@@ -155,8 +160,10 @@
       },
       "text": {
         "chatapptext": "A chat application developed during the ITAcademy bootcamp, showcasing real-time communication features using Node.js and WebSocket.",
+        "itawikitext": "Application developed with React and NodeJS, PostgreSQL database, which allows users to sign up, share, consume, and rate programming learning resources.",
         "dicegametext": "A fun dice game built with Node.js, React, and SQLite, demonstrating full-stack development skills.",
         "activityapptext": "An activity tracking app that allows users to log and manage their daily activities.",
+        "taskflowtext": "Trello-like task manager with real-time collaboration (sockets) and card drag&drop functionality.",
         "incloumaptext": "A finalist project in a hackathon, focused on creating an inclusive map application.",
         "nodecerttext": "Certification received after completing a comprehensive Node.js bootcamp.",
         "nasachallengetext": "Participated in the NASA Space Apps Challenge 2024, contributing to innovative solutions for space exploration.",

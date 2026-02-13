@@ -15,13 +15,13 @@
         "desenvolupador backend",
         "enginyer de suport"
       ],
-      "bio": "Cada dia aprenent, cada dia innovant. Dissenyo projectes adaptables, sobris i escalables... i al camí, he descobert la meva passió." 
+      "bio": "Aprenentatge constant. Innovació permanent. Solucions amb propòsit. Construeixo sistemes elegants, escalables i adaptables… i ho faig amb passió."
     }
   },
   "about": {
     "sectionTitle": "Sobre mi",
     "introductionTitle": "Introducció",
-    "introduction": "Hola! Soc en Claudio Martín, desenvolupador web a Barcelona amb més de 20 anys d'experiència liderant equips en hostaleria. La tecnologia és la meva passió, i durant el 2024 vaig completar un bootcamp de desenvolupament web a ITAcademy. Estic especialitzat en desenvolupament backend amb Node.js i bases de dades com MongoDB i MySQL/PostgreSQL. També tinc coneixements de frontend amb HTML i CSS, React i Angular bàsics, i disseny UI. Actualment treballo com a Support Engineer especialitzat en Microsoft Office 365 Security & Compliance.",
+    "introduction": "Hola! Sóc Claudio Martín, desenvolupador web a Barcelona amb més de 20 anys liderant equips en el sector de l’hostaleria. El 2024 vaig completar un bootcamp de desenvolupament web a ITAcademy, consolidant la meva transició cap al sector tecnològic. Estic especialitzat en backend amb Node.js i bases de dades com MongoDB, MySQL i PostgreSQL. També tinc experiència en frontend amb HTML, CSS, React i Angular, així com coneixements de disseny UI. Actualment treballo com a Support Engineer especialitzat en Microsoft Office 365 Security & Compliance.",
     "panels": {
       "keySkills": "Habilitats clau",
       "education": "Educació",
@@ -30,46 +30,46 @@
       "hobbies": "Aficions"
     },
     "keySkills": [
-      "Gestió d'equips",
+      "Gestió d’equips",
       "Resolució de problemes en temps real",
       "Treball sota pressió",
       "Orientació al client"
     ],
     "education": [
-      "Formació intensiva en Microsoft SCIM Security & Compliance 2025",
+      "Formació intensiva en Microsoft SCIM Security & Compliance 2025: SC900",
       "Bootcamp de desenvolupament web a ITAcademy 2024",
-      "MBA en Direcció d'Empreses a EAE Business School 2013",
+      "MBA en Direcció d’Empreses a EAE Business School 2013",
       "Curs de 300h en Gestió de Riscos en Construcció (Generalitat de Catalunya) 2009"
     ],
     "specializations": [
-      "Backend: Node.js, MongoDB, MySQL/PostgreSQL",
-      "Frontend: HTML i CSS, React bàsic, disseny UI",
-      "Office365: Seguretat i Compliment, SCIM, MDO, Exchange, Purview i EntraID"
+      "Backend: Node.js, TypeScript, APIs REST, MongoDB, MySQL, PostgreSQL",
+      "Frontend: HTML, CSS, Angular, React i principis de disseny UI",
+      "Office 365 Security: Defender, Purview, Entra ID, Azure i Exchange Online"
     ],
     "achievements": [
       "Finalista al NASA Space Apps Challenge 2024",
-      "Col·laborador a ITA Wiki amb integració d'IA i migracions de base de dades 2024 - 2025",
-      "2n lloc al Hackathon de ITAcademy 2024"
+      "Col·laborador a ITA Wiki amb integració d’IA i migracions de bases de dades 2024 - 2025",
+      "2n lloc al Hackathon d’ITAcademy 2024"
     ],
     "hobbies": [
-      "M'encanten els gossos, en Logan és el meu fidel amic",
+      "M’encanten els gossos, en Logan és el meu company fidel",
       "Els meus gèneres musicals preferits són Rock, Indie, House i Electrònica",
-      "També m'agraden els esports com MotoGP, F1 i solia jugar a futbol com a amateur"
+      "També m’agraden esports com MotoGP, F1 i abans jugava a futbol com a amateur"
     ],
-    "callToAction": "Connectem! Estic buscant nous reptes.",
+    "callToAction": "Connectem! Estic obert a nous reptes.",
     "connectButton": "Connectem!",
-    "frontendSkills": "Habilitats de Front End",
-    "backendSkills": "Habilitats de Back End",
-    "office365Skills": "Habilitats en Office365"
+    "frontendSkills": "Habilitats Front End",
+    "backendSkills": "Habilitats Back End",
+    "office365Skills": "Habilitats en Office 365"
   },
   "experience": {
     "title": "La Meva Experiència",
-    "bio":"Una petita finestra als projectes i experiències que han marcat el meu camí professional. Aquí hi trobaràs no només el què he fet, sinó la passió i els valors que poso en cada línia de codi, cada repte i cada solució creada.",
+    "bio": "Un resum de les experiències que han construït el meu perfil professional. Més enllà dels rols, representen aprenentatge continu, compromís, lideratge i capacitat d’adaptació.",
     "remote": "Remot",
     "onsite": "Presencial",
     "concentrix": {
-      "date": "Feb-2025 a Present",
-      "company": "Concentrix, A Coruña, Galícia, ESP",
+      "date": "Feb 2025 a Present",
+      "company": "Concentrix",
       "position": "Enginyer de Suport",
       "details": [
         "SCIM: Gestió d'Incidents de Seguretat i Compliment",
@@ -81,8 +81,8 @@
       ]
     },
     "itacademy": {
-      "date": "Set-2024 a Feb-2025",
-      "company": "IT Academy, Barcelona Activa, ESP",
+      "date": "Set 2024 a Feb 2025",
+      "company": "IT Academy Barcelona Activa",
       "position": "Desenvolupador Backend",
       "details": [
         "Contribució al desenvolupament del projecte ITA-Wiki",
@@ -92,8 +92,8 @@
       ]
     },
     "federal": {
-      "date": "Feb 2022 - Feb 2024",
-      "company": "Federal Café Gòtic, Barcelona, ESP",
+      "date": "Feb 2022 a Feb 2024",
+      "company": "Federal Café Gòtic Barcelona",
       "position": "Gerent General",
       "details": [
         "Supervisió financera i administrativa",
@@ -105,8 +105,8 @@
       ]
     },
     "xiringuito": {
-      "date": "Mar 2021 - Feb 2022",
-      "company": "Xiringuito Escribà Empuriabrava, ESP",
+      "date": "Juny 2013 a Juny 2015 | Mar 2021 a Feb 2022",
+      "company": "Xiringuito Escribà",
       "position": "Gerent General",
       "details": [
         "Lideratge i gestió d'operacions",
@@ -117,8 +117,8 @@
       ]
     },
     "laburg": {
-      "date": "Juny 2015 - Des 2020",
-      "company": "La Burg, Barcelona, ESP",
+      "date": "Juny 2015 a Des 2020",
+      "company": "La Burg, Barcelona",
       "position": "Gerent General",
       "details": [
         "Experiència del client i desenvolupament de personal",
@@ -131,7 +131,7 @@
   },
   "projects": {
     "title": "Els Meus Projectes",
-    "bio": "Aquí es troben els meus projectes més destacats, certificats de formació i diplomes de participació en Hackathons. Es poden visitar els projectes fent clic als links que apareixen en veure les targetes",
+    "bio": "Projectes personals i col·laboratius que reflecteixen la meva manera de treballar, aprendre i construir solucions.",
     "filters": {
       "all": "Tots",
       "web-dev": "Webs",
@@ -157,19 +157,19 @@
       "javaGoCert": "Certificats Java & GoLang",
       "itTalks": "iTtalks: Cicle de Vida & Alt Rendiment"
     },
-    
-      "text": {
-        "chatapptext": "Aplicació de xat desenvolupada durant el bootcamp d'ITAcademy utilitzant Node.js i React. Permet als usuaris enviar missatges en temps real.",
-        "itawikitext": "Aplicació desenvolupada amb React i NodeJS, bbdd PostgreSQL on permet registrar-se, compartir, consumir i valorar recursos d'aprenentatge en el món de la programació",
-        "dicegametext": "Joc de daus creat amb Node.js, React i SQLite. Els usuaris poden jugar i registrar els seus resultats.",
-        "activityapptext": "Aplicació d'activitats que permet als usuaris crear, editar i eliminar activitats, amb una interfície senzilla i intuïtiva.",
-        "taskflowtext": "Aplicació de gestió de tasques amb connexió en temps real (sockets) i sistema drag&drop per a targetes.",
-        "incloumaptext": "Projecte finalista al NASA Space Apps Challenge 2024, que combina mapes interactius amb dades espacials.",
-        "nodecerttext": "Certificat obtingut al bootcamp de Node.js, demostrant competències en desenvolupament backend.",
-        "nasachallengetext": "Participació destacada al NASA Space Apps Challenge 2024, treballant en solucions innovadores per a problemes globals.",
-        "hackathonsoText": "Finalista al Hackathon de ITAcademy 2024, on es van desenvolupar solucions creatives per a reptes tecnològics.",
-        "javaGoCertText": "Certificats obtinguts en Java i GoLang, ampliant les meves competències en desenvolupament de software.",
-        "itTalkstext": "Cicle de xerrades sobre el cicle de vida del software i optimització del rendiment, compartint coneixements amb la comunitat."
-      }   
-     }
+
+    "text": {
+      "chatapptext": "Aplicació de xat desenvolupada durant el bootcamp d'ITAcademy utilitzant Node.js i React. Permet als usuaris enviar missatges en temps real.",
+      "itawikitext": "Aplicació desenvolupada amb React i NodeJS, bbdd PostgreSQL on permet registrar-se, compartir, consumir i valorar recursos d'aprenentatge en el món de la programació",
+      "dicegametext": "Joc de daus creat amb Node.js, React i SQLite. Els usuaris poden jugar i registrar els seus resultats.",
+      "activityapptext": "Aplicació d'activitats que permet als usuaris crear, editar i eliminar activitats, amb una interfície senzilla i intuïtiva.",
+      "taskflowtext": "Aplicació de gestió de tasques amb connexió en temps real (sockets) i sistema drag&drop per a targetes.",
+      "incloumaptext": "Projecte finalista al NASA Space Apps Challenge 2024, que combina mapes interactius amb dades espacials.",
+      "nodecerttext": "Certificat obtingut al bootcamp de Node.js, demostrant competències en desenvolupament backend.",
+      "nasachallengetext": "Participació destacada al NASA Space Apps Challenge 2024, treballant en solucions innovadores per a problemes globals.",
+      "hackathonsoText": "Finalista al Hackathon de ITAcademy 2024, on es van desenvolupar solucions creatives per a reptes tecnològics.",
+      "javaGoCertText": "Certificats obtinguts en Java i GoLang, ampliant les meves competències en desenvolupament de software.",
+      "itTalkstext": "Cicle de xerrades sobre el cicle de vida del software i optimització del rendiment, compartint coneixements amb la comunitat."
+    }
+  }
   }

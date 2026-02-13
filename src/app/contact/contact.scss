@@ -9,7 +9,10 @@ body {
 
 
 .fab, .bi, .fas {
-  color:  #24abffb2;
+  color:   #3f87a6;
+  :hover{
+    color: color-mix(in srgb, #ebf8e1 50%, #f69d3c 50%);
+  }
 }
 
 
@@ -107,10 +110,10 @@ body {
 //       .cv-link {
 //         font-size: 1.1rem;
 //         font-weight: bold;
-//         color: #24abffb2;
+//         color:  #3f87a6;
 
 //         &:hover {
-//           color: lighten(#24abffb2, 10%);
+//           color: lighten( #3f87a6, 10%);
 //         }
 //       }
 //     }
@@ -149,7 +152,7 @@ body {
 //     color: rgba(255, 255, 255, 0.6);
 //   }
 //   .footer-social a i {
-//     color: #24abffb2 !important; /* color verde claro para probar */
+//     color:  #3f87a6 !important; /* color verde claro para probar */
 //   }
   
 // }

@@ -8,20 +8,16 @@
       "contact": "Contact"
     },
     "hero": {
-      "title": "Hello! I'm Claudio Martín Herranz",
-      "staticText": "I'm",
-      "professions": [
-        "a Web Developer",
-        "a Backend Developer",
-        "a Support Engineer"
-      ],
-      "bio": "Constant learning. Endless innovation. Purposeful designs — and a dash of passion. I craft adaptable, minimalist solutions… and I love every step of it."
+      "title": "Hi! I'm Claudio Martín Herranz",
+      "staticText": "I'm a",
+      "professions": ["web developer", "backend developer", "support engineer"],
+      "bio": "Continuous learning. Constant innovation. Purpose-driven solutions. I build elegant, scalable and adaptable systems… and I do it with passion."
     }
   },
   "about": {
     "sectionTitle": "About Me",
     "introductionTitle": "Introduction",
-    "introduction": "Hi! I'm Claudio Martin, a web developer based in Barcelona with 20+ years of experience leading teams in hospitality. Technology is my passion, and during 2024 I completed a web development bootcamp at ITAcademy. I specialize in backend development with Node.js and databases like MongoDB and MySQL/PostgreSQL. I also have frontend skills in HTML & CSS, basic React & Angular, and UI design. Currently I'm working as a Support Engineer specialized in Microsoft Office 365 Security & Compliance.",
+    "introduction": "Hi! I'm Claudio Martín, a web developer based in Barcelona with more than 20 years of experience leading teams in the hospitality industry. In 2024, I completed a web development bootcamp at ITAcademy, consolidating my transition into the tech sector. I specialize in backend development with Node.js and databases such as MongoDB, MySQL and PostgreSQL. I also have experience in frontend technologies including HTML, CSS, React and Angular, along with UI design fundamentals. I currently work as a Support Engineer specialized in Microsoft Office 365 Security & Compliance.",
     "panels": {
       "keySkills": "Key Skills",
       "education": "Education",
@@ -30,59 +26,58 @@
       "hobbies": "Hobbies"
     },
     "keySkills": [
-      "Team management",
-      "Real-time problem-solving",
-      "Working under pressure",
-      "Customer orientation"
+      "Team leadership",
+      "Real-time problem solving",
+      "Ability to work under pressure",
+      "Customer-oriented mindset"
     ],
     "education": [
-      "Microsoft SCIM Security & Compliance intensive formation 2025",
-      "Completed a web development bootcamp at ITAcademy 2024",
-      "Completed a MBA Business Management at EAE Business School 2013",
-      "Completed a 300h course in Construction Risk Management at Generalitat de Catalunya 2009"
+      "Microsoft SCIM Security & Compliance Intensive Training 2025: SC900",
+      "Web Development Bootcamp at ITAcademy 2024",
+      "MBA in Business Administration at EAE Business School 2013",
+      "300h Course in Construction Risk Management (Generalitat de Catalunya) 2009"
     ],
     "specializations": [
-      "Backend: Node.js, MongoDB, MySQL/PostgreSQL",
-      "Frontend: HTML & CSS, basic React, UI design",
-      "Office365: Security & Compliance, SCIM, MDO, Exchange, Purview & EntraID"
+      "Backend: Node.js, TypeScript, REST APIs, MongoDB, MySQL, PostgreSQL",
+      "Frontend: HTML, CSS, Angular, React and UI design principles",
+      "Office 365 Security: Defender, Purview, Entra ID, Azure and Exchange Online"
     ],
     "achievements": [
-      "Finalist in NASA Space Apps Challenge 2024",
-      "Contributing to ITA Wiki with AI integration & database migrations 2024 - 2025",
-      "2nd place in Hackathon ITAcademy 2024"
+      "Finalist at the NASA Space Apps Challenge 2024",
+      "Contributor to ITA Wiki with AI integrations and database migrations 2024 - 2025",
+      "2nd Place in the ITAcademy Hackathon 2024"
     ],
     "hobbies": [
-      "I'm a dog lover, Logan is my loyal friend",
-      "My favorite music genres are Rock, Indie, House & Electronic",
-      "I also love sports like MotoGP, F1 & I used to play football as amateur"
+      "I love dogs — Logan is my loyal companion",
+      "My favorite music genres are Rock, Indie, House and Electronic",
+      "I also enjoy sports like MotoGP, F1 and I used to play football at an amateur level"
     ],
-    "callToAction": "Let's connect! I'm actively seeking new challenges.",
-    "connectButton": "Let's Connect!",
+    "callToAction": "Let's connect! I'm open to new challenges.",
+    "connectButton": "Let's connect!",
     "frontendSkills": "Front End Skills",
     "backendSkills": "Back End Skills",
-    "office365Skills": "Office365 Skills"
+    "office365Skills": "Office 365 Skills"
   },
   "experience": {
     "title": "My Experience",
-    "bio": "A glimpse into the projects and experiences that have shaped my professional journey. Here you’ll find not just what I’ve built, but the passion and values I pour into every line of code, every challenge, and every solution crafted.",
+    "bio": "A summary of the experiences that have shaped my professional profile. Beyond roles, they represent continuous learning, commitment, leadership and adaptability.",
     "remote": "Remote",
-    "onsite": "On Site",
+    "onsite": "On-site",
     "concentrix": {
-      "date": "Feb-2025 to Present",
-      "company": "Concentrix, A Coruña, Galicia, SPA",
+      "date": "Feb 2025 – Present",
+      "company": "Concentrix",
       "position": "Support Engineer",
       "details": [
-        "SCIM: Security & Compliance Incident Management",
-        "Responsible for managing security and compliance incidents",
-        "Incident Analysis: Conducting thorough investigations",
-        "Cross-Functional Collaboration with IT teams",
-        "Implementing corrective measures",
-        "Specialist: MDO, Purview, EntraID, Exchange Online"
+        "Security & Compliance Incident Management (SCIM)",
+        "Technical investigation and in-depth analysis of complex cases",
+        "Cross-functional collaboration with IT and Engineering teams",
+        "Implementation of corrective actions and follow-up",
+        "Specialized in Microsoft Defender, Purview, Entra ID and Exchange Online"
       ]
     },
     "itacademy": {
-      "date": "Sept-2024 to Feb-2025",
-      "company": "IT Academy, Barcelona Activa, SPA",
+      "date": "Sept 2024 to Feb 2025",
+      "company": "IT Academy Barcelona Activa",
       "position": "Backend Developer",
       "details": [
         "Contributed to ITA-Wiki project development",
@@ -92,8 +87,8 @@
       ]
     },
     "federal": {
-      "date": "Feb 2022 - Feb 2024",
-      "company": "Federal Café Gotic, Barcelona, SPA",
+      "date": "Feb 2022 to Feb 2024",
+      "company": "Federal Café Gotic Barcelona",
       "position": "General Manager",
       "details": [
         "Financial and Administrative Oversight",
@@ -105,8 +100,8 @@
       ]
     },
     "xiringuito": {
-      "date": "Mar 2021 - Feb 2022",
-      "company": "Xiringuito Escribà Empuriabrava, SPA",
+      "date": "Jun 2013 to Juny 2015 | Mar 2021 to Feb 2022",
+      "company": "Xiringuito Escribà",
       "position": "General Manager",
       "details": [
         "Leadership and Operations management",
@@ -117,8 +112,8 @@
       ]
     },
     "laburg": {
-      "date": "Jun 2015 - Dec 2020",
-      "company": "La Burg, Barcelona, SPA",
+      "date": "Jun 2015 to Dec 2020",
+      "company": "La Burg, Barcelona",
       "position": "General Manager",
       "details": [
         "Customer Experience and Staff Development",
@@ -130,47 +125,46 @@
     }
   },
 
-    "projects": {
-      "title": "My Projects",
-      "bio": "Here you can find my most notable projects, training certificates, and Hackathon participation diplomas. Projects can be visited by clicking the links displayed on the cards.",
-      "filters": {
-        "all": "All",
-        "web-dev": "Web Dev",
-        "app-dev": "App Dev",
-        "cou-cer": "Courses & Certs"
-      },
-      "descriptions": {
-        "webdev": "Web Development",
-        "appdev": "App Development",
-        "certificate": "Certificates",
-        "hackathon": "Hackathon"
-      },
-      "titles": {
-        "chatapp": "Chat App",
-        "itawiki": "ITAcademy WIKI",
-        "dicegame": "Dice Game",
-        "activityapp": "AppActivitats",
-        "taskflow": "Taskflow",
-        "incloumap": "InclouMap",
-        "nodecert": "NodeJs Bootcamp Certificate",
-        "nasachallenge": "NASA Space Apps Challenge 2024",
-        "hackathonso": "Hackathon 2024 - Finalist",
-        "javaGoCert": "Java & GoLang Certificates",
-        "itTalks": "iTtalks: Lifecycle & High Performance Developers"
-      },
-      "text": {
-        "chatapptext": "A chat application developed during the ITAcademy bootcamp, showcasing real-time communication features using Node.js and WebSocket.",
-        "itawikitext": "Application developed with React and NodeJS, PostgreSQL database, which allows users to sign up, share, consume, and rate programming learning resources.",
-        "dicegametext": "A fun dice game built with Node.js, React, and SQLite, demonstrating full-stack development skills.",
-        "activityapptext": "An activity tracking app that allows users to log and manage their daily activities.",
-        "taskflowtext": "Trello-like task manager with real-time collaboration (sockets) and card drag&drop functionality.",
-        "incloumaptext": "A finalist project in a hackathon, focused on creating an inclusive map application.",
-        "nodecerttext": "Certification received after completing a comprehensive Node.js bootcamp.",
-        "nasachallengetext": "Participated in the NASA Space Apps Challenge 2024, contributing to innovative solutions for space exploration.",
-        "hackathonsoText": "Finalist in a hackathon event in 2024, showcasing problem-solving and development skills.",
-        "javaGoCertText": "Certificates obtained for completing courses in Java and GoLang programming languages.",
-        "itTalkstext": "A series of talks focused on the lifecycle of developers and high-performance practices in software development."
-      }
+  "projects": {
+    "title": "My Projects",
+    "bio": "Personal and collaborative projects that reflect how I work, learn and build solutions.",
+    "filters": {
+      "all": "All",
+      "web-dev": "Web Dev",
+      "app-dev": "App Dev",
+      "cou-cer": "Courses & Certs"
+    },
+    "descriptions": {
+      "webdev": "Web Development",
+      "appdev": "App Development",
+      "certificate": "Certificates",
+      "hackathon": "Hackathon"
+    },
+    "titles": {
+      "chatapp": "Chat App",
+      "itawiki": "ITAcademy WIKI",
+      "dicegame": "Dice Game",
+      "activityapp": "AppActivitats",
+      "taskflow": "Taskflow",
+      "incloumap": "InclouMap",
+      "nodecert": "NodeJs Bootcamp Certificate",
+      "nasachallenge": "NASA Space Apps Challenge 2024",
+      "hackathonso": "Hackathon 2024 - Finalist",
+      "javaGoCert": "Java & GoLang Certificates",
+      "itTalks": "iTtalks: Lifecycle & High Performance Developers"
+    },
+    "text": {
+      "chatapptext": "A chat application developed during the ITAcademy bootcamp, showcasing real-time communication features using Node.js and WebSocket.",
+      "itawikitext": "Application developed with React and NodeJS, PostgreSQL database, which allows users to sign up, share, consume, and rate programming learning resources.",
+      "dicegametext": "A fun dice game built with Node.js, React, and SQLite, demonstrating full-stack development skills.",
+      "activityapptext": "An activity tracking app that allows users to log and manage their daily activities.",
+      "taskflowtext": "Trello-like task manager with real-time collaboration (sockets) and card drag&drop functionality.",
+      "incloumaptext": "A finalist project in a hackathon, focused on creating an inclusive map application.",
+      "nodecerttext": "Certification received after completing a comprehensive Node.js bootcamp.",
+      "nasachallengetext": "Participated in the NASA Space Apps Challenge 2024, contributing to innovative solutions for space exploration.",
+      "hackathonsoText": "Finalist in a hackathon event in 2024, showcasing problem-solving and development skills.",
+      "javaGoCertText": "Certificates obtained for completing courses in Java and GoLang programming languages.",
+      "itTalkstext": "A series of talks focused on the lifecycle of developers and high-performance practices in software development."
     }
   }
-  
+}

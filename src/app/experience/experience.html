@@ -1,50 +1,65 @@
-<section id="experience" class="experience-section">
-  <h2 class="section-title">{{ 'experience.title' | translate }}</h2>
-  <h3 class="hero-bio">{{ 'experience.bio' | translate }}</h3>
-  <div class="experience-grid">
-    <igx-card
-      *ngFor="let exp of experiences; let i = index"
-      class="experience-card"
-      [ngClass]="{ 'highlighted': i === 0 }"
-    >
-      <igx-card-media>
-        <img
-          [src]="exp.picture"
-          alt="Cover for {{ exp.company }}"
-          class="card-cover"
-        />
-      </igx-card-media>
+<section
+  id="experience"
+  class="page-section experience-section"
+>
+  <div class="container">
 
-      <igx-card-header class="experience-header">
-        <div class="experience-meta">
-          <span class="experience-date">{{ exp.date | translate }}</span>
-          <span class="experience-mode" [ngClass]="exp.modeClass">
-            {{ exp.mode | translate }}
-          </span>          
+    <h2 class="section-title">
+      {{ 'experience.title' | translate }}
+    </h2>
+
+    <p class="section-subtitle">
+      {{ 'experience.bio' | translate }}
+    </p>
+
+    <div class="experience-timeline">
+      <article
+        class="experience-item"
+        *ngFor="let exp of experiences"
+      >
+        <span class="timeline-dot"></span>
+
+        <div class="experience-content">
+          <header class="experience-header">
+            <div class="company">
+              <img
+                [src]="exp.logo"
+                alt="{{ exp.company }}"
+                class="company-logo"
+              />
+
+              <div class="company-text">
+                <h4 class="company-name">
+                  {{ exp.company | translate }}
+                </h4>
+                <p class="role">
+                  {{ exp.position | translate }}
+                </p>
+              </div>
+            </div>
+
+            <div class="meta">
+              <span class="date">
+                {{ exp.date | translate }}
+              </span>
+              <span
+                class="mode"
+                [ngClass]="exp.modeClass"
+              >
+                {{ exp.mode | translate }}
+              </span>
+            </div>
+          </header>
+
+          <ul class="details">
+            <li *ngFor="let d of exp.details">
+              {{ d | translate }}
+            </li>
+          </ul>
         </div>
-        <div class="company-info">
-          <img
-            [src]="exp.logo"
-            alt="{{ exp.company }} logo"
-            class="experience-logo-small"
-          />
-          <div class="company-text">
-            <h3 class="experience-company">{{ exp.company | translate }}</h3>
-            <h4 class="experience-position">{{ exp.position | translate }}</h4>
-          </div>
-        </div>
-      </igx-card-header>
+      </article>
+    </div>
 
-      <igx-card-content class="experience-details">
-        <ul>
-          <li *ngFor="let detail of exp.details">{{ detail | translate }}</li>
-        </ul>
-      </igx-card-content>
-
-      <div class="experience-timeline">
-        <div class="timeline-dot"></div>
-        <div class="timeline-line"></div>
-      </div>
-    </igx-card>
   </div>
 </section>
+

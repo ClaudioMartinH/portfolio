@@ -27,21 +27,25 @@ export class About implements OnInit {
   skills = {
     frontend: [
       { name: 'HTML', percentage: 85 },
-      { name: 'CSS', percentage: 75 },
+      { name: 'CSS', percentage: 85 },
       { name: 'jQuery', percentage: 80 },
-      { name: 'React | Angular', percentage: 75 },
+      { name: 'Angular', percentage: 80 },
+      { name: 'React', percentage: 70 },
     ],
     backend: [
       { name: 'NodeJs', percentage: 95 },
       { name: 'Typescript | Javascript', percentage: 95 },
       { name: 'PostgreSQL | MySQL | MongoDB', percentage: 95 },
+      { name: 'OpenAI API / HuggingFace API', percentage: 75 }, 
       { name: 'GoLang', percentage: 50 },
     ],
     office365: [
-      { name: 'Microsoft Defender Online', percentage: 90 },
-      { name: 'Microsoft Purview', percentage: 80 },
-      { name: 'Microsoft EntraId', percentage: 80 },
+      { name: 'Microsoft Defender Online', percentage: 95 },
       { name: 'Microsoft Exchange Online', percentage: 90 },
+      { name: 'Microsoft Purview', percentage: 95 },
+      { name: 'Microsoft EntraId', percentage: 80 },
+      { name: 'Microsoft Copilot', percentage: 70 }, 
+      { name: 'Microsoft Azure', percentage: 60 },
     ],
   };
 
